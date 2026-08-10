@@ -1,0 +1,105 @@
+{
+  "retrieval_id": "20260810T175216Z",
+  "started_at": "2026-08-10T17:52:16.667705+00:00",
+  "completed_at": "2026-08-10T17:52:44.458281+00:00",
+  "source": "OpenF1",
+  "raw_files_are_exact_http_response_bodies": true,
+  "requests": [
+    {
+      "endpoint": "sessions",
+      "url": "https://api.openf1.org/v1/sessions?year=2023&session_name=Race",
+      "retrieved_at": "2026-08-10T17:52:16.670105+00:00",
+      "status": 200,
+      "sha256": "1c4ebc39663a3ae9e1ce069a7739e4b2f14366b75e79769317499bcf8b6a3554",
+      "bytes": 8229
+    },
+    {
+      "endpoint": "session_result",
+      "url": "https://api.openf1.org/v1/session_result?session_key=7953&session_key=7779&session_key=7787&session_key=9070&session_key=9078&session_key=9086&session_key=9094&session_key=9102&session_key=9110&session_key=9118&session_key=9126&session_key=9133&session_key=9141&session_key=9149&session_key=9157&session_key=9165&session_key=9173&session_key=9221&session_key=9213&session_key=9181&session_key=9205&session_key=9189&session_key=9197",
+      "retrieved_at": "2026-08-10T17:52:18.770426+00:00",
+      "status": 200,
+      "sha256": "9dbcea8ecd1aa5e0a40d3b816b4d0287d3de317964518ddfb019349a45b6ab7a",
+      "bytes": 80343
+    },
+    {
+      "endpoint": "drivers",
+      "url": "https://api.openf1.org/v1/drivers?session_key=7779&session_key=7787&session_key=7953&session_key=9070&session_key=9078&session_key=9094&session_key=9102&session_key=9110&session_key=9118&session_key=9126&session_key=9133&session_key=9141&session_key=9149&session_key=9157&session_key=9165&session_key=9173&session_key=9181&session_key=9189&session_key=9197&session_key=9205&session_key=9213&session_key=9221",
+      "retrieved_at": "2026-08-10T17:52:20.870729+00:00",
+      "status": 200,
+      "sha256": "83cafd7e128f4a923b0b12302aad9b003cabae8dd04c93027e2dc688b0604e80",
+      "bytes": 168107
+    },
+    {
+      "endpoint": "sessions",
+      "url": "https://api.openf1.org/v1/sessions?year=2024&session_name=Race",
+      "retrieved_at": "2026-08-10T17:52:22.970962+00:00",
+      "status": 200,
+      "sha256": "0802447b8798abea1959794a9e215b7c05bf033913ea63f5380c154d8ed285b5",
+      "bytes": 8583
+    },
+    {
+      "endpoint": "session_result",
+      "url": "https://api.openf1.org/v1/session_result?session_key=9472&session_key=9480&session_key=9488&session_key=9496&session_key=9673&session_key=9507&session_key=9515&session_key=9523&session_key=9531&session_key=9539&session_key=9550&session_key=9558&session_key=9566&session_key=9574&session_key=9582&session_key=9590&session_key=9598&session_key=9606&session_key=9617&session_key=9625&session_key=9636&session_key=9644&session_key=9655&session_key=9662",
+      "retrieved_at": "2026-08-10T17:52:25.071377+00:00",
+      "status": 200,
+      "sha256": "3bca55217a0827d0acbdf6b961507df574b28c2b998f3969944ee6f46e16bc4a",
+      "bytes": 87680
+    },
+    {
+      "endpoint": "drivers",
+      "url": "https://api.openf1.org/v1/drivers?session_key=9472&session_key=9480&session_key=9488&session_key=9496&session_key=9507&session_key=9515&session_key=9523&session_key=9531&session_key=9539&session_key=9550&session_key=9558&session_key=9566&session_key=9574&session_key=9582&session_key=9590&session_key=9598&session_key=9606&session_key=9617&session_key=9625&session_key=9636&session_key=9644&session_key=9655&session_key=9662&session_key=9673",
+      "retrieved_at": "2026-08-10T17:52:29.011285+00:00",
+      "status": 200,
+      "sha256": "a99c9894398711434087bfea96f464cd99cbb6f879f513b5ad45a951901b8c9b",
+      "bytes": 196326
+    },
+    {
+      "endpoint": "sessions",
+      "url": "https://api.openf1.org/v1/sessions?year=2025&session_name=Race",
+      "retrieved_at": "2026-08-10T17:52:31.946770+00:00",
+      "status": 200,
+      "sha256": "37b519c799c25870245a999875d18b887870868d47be57367638985842ab1f01",
+      "bytes": 8595
+    },
+    {
+      "endpoint": "session_result",
+      "url": "https://api.openf1.org/v1/session_result?session_key=9693&session_key=9998&session_key=10006&session_key=10014&session_key=10022&session_key=10033&session_key=9987&session_key=9979&session_key=9971&session_key=9963&session_key=9955&session_key=9947&session_key=9939&session_key=9928&session_key=9920&session_key=9912&session_key=9904&session_key=9896&session_key=9888&session_key=9877&session_key=9869&session_key=9858&session_key=9850&session_key=9839",
+      "retrieved_at": "2026-08-10T17:52:34.046937+00:00",
+      "status": 200,
+      "sha256": "054731f9221d33795276df7b133ce07b1c1e33cd7e73526afe5d93a1de414212",
+      "bytes": 87801
+    },
+    {
+      "endpoint": "drivers",
+      "url": "https://api.openf1.org/v1/drivers?session_key=9693&session_key=9839&session_key=9850&session_key=9858&session_key=9869&session_key=9877&session_key=9888&session_key=9896&session_key=9904&session_key=9912&session_key=9920&session_key=9928&session_key=9939&session_key=9947&session_key=9955&session_key=9963&session_key=9971&session_key=9979&session_key=9987&session_key=9998&session_key=10006&session_key=10014&session_key=10022&session_key=10033",
+      "retrieved_at": "2026-08-10T17:52:36.147222+00:00",
+      "status": 200,
+      "sha256": "c525191c11bca78d9d2c4d185f2c4b77094616323a0279a75093585f1d8120d3",
+      "bytes": 196846
+    },
+    {
+      "endpoint": "sessions",
+      "url": "https://api.openf1.org/v1/sessions?year=2026&session_name=Race",
+      "retrieved_at": "2026-08-10T17:52:38.944983+00:00",
+      "status": 200,
+      "sha256": "52787f06c872631b6530509944e592275bc52d2c01d3ae4d846a59e75e93eb97",
+      "bytes": 8986
+    },
+    {
+      "endpoint": "session_result",
+      "url": "https://api.openf1.org/v1/session_result?session_key=11234&session_key=11245&session_key=11253&session_key=11261&session_key=11269&session_key=11280&session_key=11291&session_key=11299&session_key=11307&session_key=11315&session_key=11326&session_key=11334&session_key=11342",
+      "retrieved_at": "2026-08-10T17:52:41.045225+00:00",
+      "status": 200,
+      "sha256": "ea32840625cff51594164e9c769d997dc006070392ce57882d5b09594f087dd9",
+      "bytes": 44423
+    },
+    {
+      "endpoint": "drivers",
+      "url": "https://api.openf1.org/v1/drivers?session_key=11234&session_key=11245&session_key=11253&session_key=11280&session_key=11291&session_key=11299&session_key=11307&session_key=11315&session_key=11326&session_key=11334&session_key=11342",
+      "retrieved_at": "2026-08-10T17:52:43.145818+00:00",
+      "status": 200,
+      "sha256": "84b7080fc7e1b114b38780fca8d4479b025db61fa0aa6c0d954bce84513b55ff",
+      "bytes": 100816
+    }
+  ]
+}
