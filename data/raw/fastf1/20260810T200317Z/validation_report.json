@@ -1,0 +1,48 @@
+{
+  "retrieval_id": "20260810T200317Z",
+  "source": "FastF1",
+  "status": "passed",
+  "errors": [],
+  "yearly_validation": [
+    {
+      "year": 2023,
+      "scheduled_races": 22,
+      "completed_races_with_results": 22,
+      "result_rows": 440,
+      "minimum_field_size": 20,
+      "maximum_field_size": 20,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "year": 2024,
+      "scheduled_races": 24,
+      "completed_races_with_results": 24,
+      "result_rows": 479,
+      "minimum_field_size": 19,
+      "maximum_field_size": 20,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "year": 2025,
+      "scheduled_races": 24,
+      "completed_races_with_results": 24,
+      "result_rows": 479,
+      "minimum_field_size": 19,
+      "maximum_field_size": 20,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "year": 2026,
+      "scheduled_races": 23,
+      "completed_races_with_results": 11,
+      "result_rows": 242,
+      "minimum_field_size": 22,
+      "maximum_field_size": 22,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

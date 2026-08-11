@@ -1,0 +1,70 @@
+{
+  "retrieval_id": "20260810T200317Z",
+  "started_at": "2026-08-10T20:03:17.059906+00:00",
+  "completed_at": "2026-08-10T20:03:31.069140+00:00",
+  "source": "FastF1",
+  "fastf1_version": "3.8.3",
+  "python_version": "3.14.6",
+  "schedule_interface": "fastf1.get_event_schedule",
+  "result_interface": "fastf1.ergast.Ergast.get_race_results",
+  "result_backend": "Jolpica-F1 through FastF1",
+  "result_pages": {
+    "2023": 5,
+    "2024": 5,
+    "2025": 5,
+    "2026": 3
+  },
+  "cache_directory": "data/cache/fastf1",
+  "files": [
+    {
+      "path": "2023/race_schedule.json",
+      "bytes": 20271,
+      "sha256": "4b6f5a49b3074166ea8ed6fce4c91eda627e0eed762ea57a9f3f730586eb3dd6"
+    },
+    {
+      "path": "2023/race_results.json",
+      "bytes": 472282,
+      "sha256": "129814dfac9ce51fc85c3ce2f3eeb03be1972ada0db0c5874642281553fe0a8b"
+    },
+    {
+      "path": "2024/race_schedule.json",
+      "bytes": 22172,
+      "sha256": "c4d695ae48bc2775a1a5a21a9deaec5305a3831eac1d9334a6a48e1a3d271aca"
+    },
+    {
+      "path": "2024/race_results.json",
+      "bytes": 510565,
+      "sha256": "e093aef02b9b28d034ed6924d92cef4b299faae9d81b57109f7c6dc86cb6853f"
+    },
+    {
+      "path": "2025/race_schedule.json",
+      "bytes": 22209,
+      "sha256": "191d848a56a5e53a54a61ad98a219c018e489f367f1409d43ca0af474de56e32"
+    },
+    {
+      "path": "2025/race_results.json",
+      "bytes": 466178,
+      "sha256": "dd15d22a01f12004ff826edc6d953eb7eb7ed4d5baba50333fdb9848002b15c2"
+    },
+    {
+      "path": "2026/race_schedule.json",
+      "bytes": 21285,
+      "sha256": "d8e1e3c3b59b1a5ea99af0bb1b378d569fe47f9d481332cac94433e1e76c7343"
+    },
+    {
+      "path": "2026/race_results.json",
+      "bytes": 233602,
+      "sha256": "f5ec7c97a4053a5e239c6850e2fa41e4f572eeef9e333762a86a679dc1ccaecb"
+    },
+    {
+      "path": "validation_report.json",
+      "bytes": 1070,
+      "sha256": "6cb989438cdee9bc4e11671fa983bca594554b8b13d00eedf24c2cf468f2383e"
+    },
+    {
+      "path": "current_2026_grid.json",
+      "bytes": 5340,
+      "sha256": "71e3cc752879317c453cbd7ed1d50c104e271c2869f92307572a72407268f708"
+    }
+  ]
+}

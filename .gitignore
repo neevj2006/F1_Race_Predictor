@@ -1,5 +1,7 @@
 __pycache__/
 *.py[cod]
+.venv/
+data/cache/
 
 # Keep failed validation retrievals locally for debugging, not in Git.
 data/raw/openf1/20260810T175123Z/
