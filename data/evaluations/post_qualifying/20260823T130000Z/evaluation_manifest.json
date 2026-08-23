@@ -1,0 +1,41 @@
+{
+  "selection_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "test_rounds": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "model_frozen_after_round": 6,
+  "weekend_weights_tested": [
+    0.6,
+    0.7,
+    0.8
+  ],
+  "context_groups_tested": [
+    "pre_weekend",
+    "reliability",
+    "practice",
+    "circuit_profile",
+    "all_context"
+  ],
+  "context_retention_rule": "A context group must improve average selection Spearman and beat the matching pre-weekend support model in at least 3 selection races.",
+  "selected_model": "post_qualifying_practice_weekend_70",
+  "pre_weekend_benchmark": {
+    "model_id": "ridge_full_unweighted_alpha_100",
+    "average_spearman_correlation": 0.7066064370412196,
+    "races": 5
+  },
+  "feature_dataset_sha256": "80f2c248d17cb80f6aad6d492e6ece263c93c3ca20bed7ee91235288da0848c2",
+  "weather_included": false,
+  "circuit_comparison_is_descriptive": true,
+  "circuit_results_are_not_treated_as_guarantees": true
+}

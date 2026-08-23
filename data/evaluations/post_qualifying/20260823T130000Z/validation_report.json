@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checked_at": "2026-08-23T13:18:57.224877+00:00",
+  "selected_model": "post_qualifying_practice_weekend_70",
+  "training_rows": 1344,
+  "prediction_rows": 110,
+  "test_races": 5,
+  "test_races_beating_pre_weekend": 5,
+  "checks": {
+    "test_rounds_are_exact": true,
+    "training_contains_only_classified_results": true,
+    "training_cutoff_is_round_six": true,
+    "every_test_race_has_every_driver_once": true,
+    "valid_finishing_orders": true,
+    "strong_weekend_weight": true,
+    "post_qualifying_beats_pre_weekend_average": true,
+    "post_qualifying_beats_pre_weekend_in_three_races": true,
+    "saved_model_exists": true,
+    "no_weather_features": true
+  },
+  "errors": []
+}

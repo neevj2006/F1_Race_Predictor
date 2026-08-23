@@ -47,11 +47,16 @@ def register_model(
 
     source_model = model_dir / "ranking_model.joblib"
     source_metadata = model_dir / "model_metadata.json"
-    feature_file = feature_dir / "pre_weekend_features.csv"
-    target_file = feature_dir / "race_targets.csv"
+    metadata = read_json(source_metadata)
+    feature_file = feature_dir / Path(str(metadata["feature_dataset"])).name
+    target_file = feature_dir / Path(str(metadata["target_dataset"])).name
     feature_manifest_path = feature_dir / "feature_manifest.json"
     evaluation_manifest_path = evaluation_dir / "evaluation_manifest.json"
-    evaluation_summary_path = evaluation_dir / "model_summary.csv"
+    evaluation_summary_path = (
+        evaluation_dir / "model_summary.csv"
+        if (evaluation_dir / "model_summary.csv").is_file()
+        else evaluation_dir / "model_summary.json"
+    )
     required = [
         source_model,
         source_metadata,
@@ -65,7 +70,6 @@ def register_model(
     if missing:
         raise FileNotFoundError("Missing registry inputs: " + ", ".join(missing))
 
-    metadata = read_json(source_metadata)
     feature_manifest = read_json(feature_manifest_path)
     evaluation_manifest = read_json(evaluation_manifest_path)
     registered_model = destination / "model.joblib"
@@ -77,7 +81,8 @@ def register_model(
         "model_id": metadata["model_id"],
         "model_family": metadata["model_family"],
         "feature_set": metadata["feature_set"],
-        "history_scheme": metadata["history_scheme"],
+        "history_scheme": metadata.get("history_scheme"),
+        "context_group": metadata.get("context_group"),
         "feature_columns": metadata["feature_columns"],
         "parameters": metadata["parameters"],
         "random_seed": metadata["random_seed"],

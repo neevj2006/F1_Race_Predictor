@@ -1,0 +1,115 @@
+{
+  "weekend_weight": 0.7,
+  "support_weight": 0.30000000000000004,
+  "weekend_score_components": {
+    "official_grid_score": 0.65,
+    "qualifying_position_score": 0.25,
+    "qualifying_pace_score": 0.1
+  },
+  "support_feature_effects": [
+    {
+      "feature": "practice_sector_rank_score",
+      "standardized_coefficient": 0.055682909811729096
+    },
+    {
+      "feature": "constructor_recent_finish_score_5",
+      "standardized_coefficient": 0.04363013034794087
+    },
+    {
+      "feature": "driver_recent_finish_score_5",
+      "standardized_coefficient": 0.04261105676394146
+    },
+    {
+      "feature": "driver_recent_finish_score_10",
+      "standardized_coefficient": 0.03959738381193671
+    },
+    {
+      "feature": "constructor_recent_finish_score_10",
+      "standardized_coefficient": 0.02490496776611612
+    },
+    {
+      "feature": "driver_circuit_prior_starts",
+      "standardized_coefficient": -0.021087811791637125
+    },
+    {
+      "feature": "practice_overall_score",
+      "standardized_coefficient": 0.017083911950518282
+    },
+    {
+      "feature": "constructor_recent_dnf_rate_10",
+      "standardized_coefficient": -0.013291739267617292
+    },
+    {
+      "feature": "practice_laps",
+      "standardized_coefficient": 0.010833697914005836
+    },
+    {
+      "feature": "driver_recent_teammate_delta_10",
+      "standardized_coefficient": 0.010817645901094798
+    },
+    {
+      "feature": "practice_best_lap_score",
+      "standardized_coefficient": -0.01068336553077797
+    },
+    {
+      "feature": "driver_prior_classified_finishes",
+      "standardized_coefficient": 0.009048304745836412
+    },
+    {
+      "feature": "long_run_score",
+      "standardized_coefficient": -0.008788497675083993
+    },
+    {
+      "feature": "long_run_gap_percent",
+      "standardized_coefficient": -0.00867408807963147
+    },
+    {
+      "feature": "constructor_circuit_prior_races",
+      "standardized_coefficient": 0.007335790139079177
+    },
+    {
+      "feature": "practice_missing",
+      "standardized_coefficient": -0.006663167650593879
+    },
+    {
+      "feature": "practice_compound_count",
+      "standardized_coefficient": -0.005234543023919153
+    },
+    {
+      "feature": "driver_recent_teammate_delta_5",
+      "standardized_coefficient": 0.00460431650135634
+    },
+    {
+      "feature": "constructor_prior_races",
+      "standardized_coefficient": 0.0042830311137050416
+    },
+    {
+      "feature": "practice_gap_percent",
+      "standardized_coefficient": 0.004089612809555023
+    },
+    {
+      "feature": "driver_prior_seasons",
+      "standardized_coefficient": 0.003116416239194589
+    },
+    {
+      "feature": "long_run_laps",
+      "standardized_coefficient": -0.0028747829682510967
+    },
+    {
+      "feature": "driver_prior_starts",
+      "standardized_coefficient": 0.0022098867654694165
+    },
+    {
+      "feature": "driver_circuit_classified_finishes",
+      "standardized_coefficient": 0.0013629466518983598
+    },
+    {
+      "feature": "degradation_percent_per_lap",
+      "standardized_coefficient": -0.0012650220886488066
+    },
+    {
+      "feature": "practice_sector_score",
+      "standardized_coefficient": -0.00022081910018319494
+    }
+  ]
+}

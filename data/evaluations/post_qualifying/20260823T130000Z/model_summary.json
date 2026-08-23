@@ -1,0 +1,13 @@
+{
+  "model_id": "post_qualifying_practice_weekend_70",
+  "context_group": "practice",
+  "weekend_weight": 0.7,
+  "test_races": 5,
+  "average_spearman_correlation": 0.7535855448898927,
+  "average_mean_absolute_position_error": 2.8363636363636364,
+  "average_kendall_correlation": 0.6502164502164502,
+  "winner_accuracy": 0.6,
+  "average_top_three_overlap": 0.5333333333333333,
+  "pre_weekend_average_spearman": 0.7066064370412196,
+  "spearman_improvement": 0.046979107848673096
+}

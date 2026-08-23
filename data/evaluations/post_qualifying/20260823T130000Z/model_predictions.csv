@@ -1,0 +1,111 @@
+model_id,context_group,weekend_weight,race_id,season,round,race_date,driver_id,driver_name,constructor_id,constructor_name,support_score,qualifying_weekend_score,model_score,predicted_position,actual_position,actual_classification_status,absolute_position_error
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,russell,George Russell,mercedes,Mercedes,0.8646794027244569,1.0,0.959403820817337,1,2,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.9037043611316908,0.9057424825873787,0.9051310461506723,2,16,CLASSIFIED,14
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,hamilton,Lewis Hamilton,ferrari,Ferrari,0.7843911918135518,0.9554288545450722,0.904117555725616,3,1,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,norris,Lando Norris,mclaren,McLaren,0.8322911357681714,0.8628049958584647,0.8536508378313767,4,3,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,max_verstappen,Max Verstappen,red_bull,Red Bull,0.8018907218926766,0.8194122271895141,0.8141557756004628,5,4,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,piastri,Oscar Piastri,mclaren,McLaren,0.8302059186103372,0.7318500324244911,0.7613567982802449,6,5,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,hadjar,Isack Hadjar,red_bull,Red Bull,0.6447256700500046,0.7750553320593092,0.7359564334565178,7,6,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,leclerc,Charles Leclerc,ferrari,Ferrari,0.8345680819111554,0.5981633773502972,0.6690847887185547,8,15,CLASSIFIED,7
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,lawson,Liam Lawson,rb,RB F1 Team,0.6025923327629343,0.6757361507251034,0.6537930053364527,9,8,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,hulkenberg,Nico Hülkenberg,audi,Audi,0.5063234262459988,0.6279780316899186,0.5914816500567426,10,20,DNF,10
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.574977376668894,0.5403354930531244,0.5507280581378553,11,9,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,bortoleto,Gabriel Bortoleto,audi,Audi,0.47713339891030815,0.49316656241092827,0.48835661336074226,12,11,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5254626582792664,0.4452209743416107,0.4692934795229074,13,10,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.606290644556978,0.40048914114314044,0.46222959216729176,14,7,CLASSIFIED,7
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,bearman,Oliver Bearman,haas,Haas F1 Team,0.5613382259405761,0.35420399309042727,0.4163442629454719,15,17,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,sainz,Carlos Sainz,williams,Williams,0.5120346919309892,0.29817045526281055,0.36232972626326415,16,12,CLASSIFIED,4
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,ocon,Esteban Ocon,haas,Haas F1 Team,0.4642340825209104,0.250171304612312,0.31439013798489157,17,13,CLASSIFIED,4
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,albon,Alexander Albon,williams,Williams,0.42400026184763173,0.197913928757941,0.26573982868484824,18,18,NC,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.2528454421521134,0.1518162497393607,0.18212500746318652,19,14,CLASSIFIED,5
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.23621472108812097,0.10328147327705428,0.1431614476203743,20,21,DNF,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,stroll,Lance Stroll,aston_martin,Aston Martin,0.2955887762531734,0.042857142857142906,0.11867663287595207,21,22,DNF,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-07,2026,7,2026-06-14,alonso,Fernando Alonso,aston_martin,Aston Martin,0.393125381009119,0.0,0.11793761430273571,22,19,DNF,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,russell,George Russell,mercedes,Mercedes,0.8694714982852945,1.0,0.9608414494855884,1,1,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,leclerc,Charles Leclerc,ferrari,Ferrari,0.7866441995756925,0.950003565324304,0.9009957555997206,2,8,CLASSIFIED,6
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8517634217998109,0.9053615995125228,0.8892821461987093,3,5,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8813609379719174,0.8623229492362643,0.8680343458569602,4,3,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,max_verstappen,Max Verstappen,red_bull,Red Bull,0.8235863247051575,0.8176204809514449,0.8194102340775586,5,2,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,norris,Lando Norris,mclaren,McLaren,0.8216418591523436,0.773946554708281,0.7882551460414998,6,7,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,piastri,Oscar Piastri,mclaren,McLaren,0.8109904812263948,0.7308171507224646,0.7548691498736436,7,4,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,hadjar,Isack Hadjar,red_bull,Red Bull,0.6933451433580771,0.684299608246487,0.6870132687799639,8,6,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,lawson,Liam Lawson,rb,RB F1 Team,0.6551657252025247,0.6316713159936127,0.6387196387562862,9,9,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5944849768602125,0.5872411088374664,0.5894142692442902,10,10,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6433046856266862,0.5378496988921565,0.5694861949125154,11,13,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,bortoleto,Gabriel Bortoleto,audi,Audi,0.4657220931271043,0.492874969478663,0.48472910657319535,12,11,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,bearman,Oliver Bearman,haas,Haas F1 Team,0.5493347722517165,0.4430600422220831,0.4749424612309731,13,14,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,hulkenberg,Nico Hülkenberg,audi,Audi,0.47290392098637646,0.39754079055124225,0.4201497296817825,14,12,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,ocon,Esteban Ocon,haas,Haas F1 Team,0.45704932283497707,0.348451892971125,0.3810311219302806,15,16,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.536664159352899,0.3032654049019966,0.3732850312372673,16,15,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,sainz,Carlos Sainz,williams,Williams,0.5152112240004336,0.24957831937094732,0.3292681907597932,17,20,DNF,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,albon,Alexander Albon,williams,Williams,0.431621414339897,0.19894660872834602,0.2687490504118113,18,17,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.24930610696164024,0.14289992674879182,0.17482178081264635,19,21,DNF,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.2471309399104023,0.0974714287875088,0.14236928212437683,20,22,DNF,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,alonso,Fernando Alonso,aston_martin,Aston Martin,0.3728846568627393,0.042857142857142906,0.14186539705882184,21,18,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-08,2026,8,2026-06-28,stroll,Lance Stroll,aston_martin,Aston Martin,0.2520472744622314,0.0,0.07561418233866943,22,19,DNF,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8749649526566476,1.0,0.9624894857969943,1,15,CLASSIFIED,14
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,leclerc,Charles Leclerc,ferrari,Ferrari,0.8017153215998514,0.9531705948827536,0.9077340128978829,2,1,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8812483646908957,0.9064092856899659,0.8988610093902449,3,3,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,russell,George Russell,mercedes,Mercedes,0.8644857849416547,0.8630300740786381,0.863466787337543,4,2,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,hadjar,Isack Hadjar,red_bull,Red Bull,0.7266343684904374,0.8141577912276239,0.787900764406468,5,5,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,norris,Lando Norris,mclaren,McLaren,0.801880685268798,0.7683271263357747,0.7783931940156816,6,4,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,max_verstappen,Max Verstappen,red_bull,Red Bull,0.8516673555108518,0.7251068052148508,0.7630749703036511,7,20,CLASSIFIED,13
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,piastri,Oscar Piastri,mclaren,McLaren,0.7933901168928001,0.6790945511911115,0.7133832209016181,8,11,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5752235791964808,0.6300406792082065,0.6135955492046888,9,7,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,lawson,Liam Lawson,rb,RB F1 Team,0.647771750394742,0.5872970295584953,0.6054394458093693,10,6,CLASSIFIED,4
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,bortoleto,Gabriel Bortoleto,audi,Audi,0.4956897936714468,0.540785405422057,0.5272567218968739,11,8,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,hulkenberg,Nico Hülkenberg,audi,Audi,0.5089925377823216,0.4842530066242203,0.49167486597165067,12,22,DNF,10
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,bearman,Oliver Bearman,haas,Haas F1 Team,0.5339645246059568,0.41955977065725,0.453881196841862,13,12,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.5871706262882262,0.39140653753301446,0.450135764159578,14,10,CLASSIFIED,4
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,sainz,Carlos Sainz,williams,Williams,0.5024123023230495,0.3753180106694426,0.4134462981655247,15,17,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,albon,Alexander Albon,williams,Williams,0.43755642839061715,0.2997833901069592,0.3411153015920566,16,21,DNF,5
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,ocon,Esteban Ocon,haas,Haas F1 Team,0.44389168058829853,0.2559729043073915,0.31234853719166367,17,13,CLASSIFIED,4
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.6008992535123701,0.15570878940038316,0.28926592863397926,18,9,CLASSIFIED,9
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.22708605004930166,0.20069960455723868,0.20861553820485756,19,16,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.21359138537757805,0.10990082315002042,0.14100799181828771,20,14,CLASSIFIED,6
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,alonso,Fernando Alonso,aston_martin,Aston Martin,0.3183178715921885,0.030952380952380988,0.11716202814432326,21,18,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-09,2026,9,2026-07-05,stroll,Lance Stroll,aston_martin,Aston Martin,0.20136368489489226,0.011904761904761918,0.06874243880180103,22,19,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8107785137824575,1.0,0.9432335541347372,1,1,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,max_verstappen,Max Verstappen,red_bull,Red Bull,0.7908573406057378,0.9510677907866512,0.9030046557323772,2,3,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,russell,George Russell,mercedes,Mercedes,0.8360546033245033,0.8926455148132785,0.8756682413666459,3,22,DNF,19
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,leclerc,Charles Leclerc,ferrari,Ferrari,0.7704348644906425,0.8493284300238045,0.8256603603638559,4,2,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8613678113006596,0.8064329586723006,0.8229134144608083,5,4,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,piastri,Oscar Piastri,mclaren,McLaren,0.743556226223849,0.7612569419063224,0.7559467272015803,6,5,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.6328719112951411,0.7159659396572609,0.691037731148625,7,9,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,norris,Lando Norris,mclaren,McLaren,0.8271214375298455,0.5963296360025021,0.6655671764607052,8,7,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,bortoleto,Gabriel Bortoleto,audi,Audi,0.5212756279774368,0.663814136917595,0.6210525842355475,9,8,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,lawson,Liam Lawson,rb,RB F1 Team,0.6625305892081378,0.5996234225429037,0.6184955725424739,10,12,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.5742697677393704,0.5527226235306838,0.5591867667932898,11,11,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5337869849787438,0.508696461595533,0.5162236186104961,12,10,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,hulkenberg,Nico Hülkenberg,audi,Audi,0.5127879531796846,0.4604924937750418,0.47618113159643466,13,13,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,bearman,Oliver Bearman,haas,Haas F1 Team,0.4969453949769158,0.3727084693652663,0.40997954704876116,14,14,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,hadjar,Isack Hadjar,red_bull,Red Bull,0.6890087675359701,0.2457913944316908,0.3787566063629746,15,6,CLASSIFIED,9
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,albon,Alexander Albon,williams,Williams,0.43245573001188486,0.3233163182195864,0.3560581417572759,16,15,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,ocon,Esteban Ocon,haas,Haas F1 Team,0.42261838031792015,0.26740832303255024,0.3139713402181612,17,17,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,sainz,Carlos Sainz,williams,Williams,0.4232460605832517,0.22988965500248432,0.28789657667671453,18,16,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.2617241664713841,0.2241295667374372,0.23540794665762127,19,18,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.2393849295919928,0.1784361152975863,0.19672075958590826,20,21,DNF,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,stroll,Lance Stroll,aston_martin,Aston Martin,0.2168679238807934,0.06190476190476191,0.10839371049757136,21,20,DNF,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-10,2026,10,2026-07-19,alonso,Fernando Alonso,aston_martin,Aston Martin,0.2872871438840582,0.011904761904761918,0.09451947649855082,22,19,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,norris,Lando Norris,mclaren,McLaren,0.8529110313667025,1.0,0.9558733094100107,1,1,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,leclerc,Charles Leclerc,ferrari,Ferrari,0.829305481438854,0.9390728511540096,0.9061426402394629,2,4,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8931345562151609,0.8639748616428191,0.8727227700145217,3,5,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,piastri,Oscar Piastri,mclaren,McLaren,0.7776205233108477,0.8781197979211113,0.8479700155380322,4,20,DNF,16
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,max_verstappen,Max Verstappen,red_bull,Red Bull,0.7524441582384073,0.8342005752007435,0.8096736501120426,5,2,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8234349160807048,0.7715254353324734,0.7870982795569428,6,3,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,russell,George Russell,mercedes,Mercedes,0.8112029536606798,0.7594843978494422,0.7749999645928136,7,7,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,hadjar,Isack Hadjar,red_bull,Red Bull,0.7167273092749357,0.6831880528967581,0.6932498298102114,8,6,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.6089525576860342,0.6293215456037476,0.6232108492284336,9,10,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,lawson,Liam Lawson,rb,RB F1 Team,0.6669278096940303,0.5310695366260274,0.5718270185464283,10,8,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,hulkenberg,Nico Hülkenberg,audi,Audi,0.5004880826123803,0.5771906322335687,0.5541798673472121,11,9,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.5776968801545,0.48616594720315887,0.5136252270885613,12,12,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5504946557391438,0.43856830154186593,0.4721462078010493,13,15,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,bortoleto,Gabriel Bortoleto,audi,Audi,0.5277411939764486,0.3946231744345903,0.4345585802971478,14,11,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,ocon,Esteban Ocon,haas,Haas F1 Team,0.42462044164266255,0.33453961428367857,0.36156386249137373,15,16,CLASSIFIED,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,bearman,Oliver Bearman,haas,Haas F1 Team,0.479373454557333,0.23589903950233948,0.30894136401883754,16,19,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,alonso,Fernando Alonso,aston_martin,Aston Martin,0.300024450316907,0.28976554679534977,0.29284321785181694,17,14,CLASSIFIED,3
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,sainz,Carlos Sainz,williams,Williams,0.3606981998457037,0.18299099452492276,0.23630315612115704,18,18,CLASSIFIED,0
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,albon,Alexander Albon,williams,Williams,0.3627435652151198,0.13917538935218665,0.2062458421110666,19,17,CLASSIFIED,2
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,stroll,Lance Stroll,aston_martin,Aston Martin,0.226158201458245,0.09629234210813606,0.13525209991316875,20,13,CLASSIFIED,7
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.19990939637361121,0.04755490342289467,0.09326125130810964,21,22,DNF,1
+post_qualifying_practice_weekend_70,practice,0.7,2026-11,2026,11,2026-07-26,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.27495707945694603,0.0,0.08248712383708381,22,21,DNF,1
