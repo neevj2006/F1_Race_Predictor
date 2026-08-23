@@ -1,0 +1,38 @@
+{
+  "win": {
+    "c": 10.0,
+    "coefficient": 3.204097723171933,
+    "intercept": 2.14953879398255,
+    "selection_raw_brier": 0.022620289562289564,
+    "selection_grouped_cv_brier": 0.017996726201325038,
+    "use_calibration": true,
+    "retained_after_test": true
+  },
+  "podium": {
+    "c": 1.0,
+    "coefficient": 0.6640573438835672,
+    "intercept": -0.1344147875446966,
+    "selection_raw_brier": 0.06992648316498316,
+    "selection_grouped_cv_brier": 0.07083528391529129,
+    "use_calibration": false,
+    "retained_after_test": false
+  },
+  "top_10": {
+    "c": 0.1,
+    "coefficient": 0.2926422033981015,
+    "intercept": 0.05777347882360944,
+    "selection_raw_brier": 0.22922542929292927,
+    "selection_grouped_cv_brier": 0.1935220446610743,
+    "use_calibration": true,
+    "retained_after_test": false
+  },
+  "dnf": {
+    "c": 0.1,
+    "coefficient": 0.1856410819610808,
+    "intercept": -1.107287889376925,
+    "selection_raw_brier": 0.148322015993266,
+    "selection_grouped_cv_brier": 0.14546080933125058,
+    "use_calibration": true,
+    "retained_after_test": false
+  }
+}

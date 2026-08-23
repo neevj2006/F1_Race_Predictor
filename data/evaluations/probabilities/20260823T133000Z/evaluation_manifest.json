@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-08-23T13:44:44.157653+00:00",
+  "feature_dataset": {
+    "path": "data/features/post_qualifying/20260823T130000Z/post_qualifying_features.csv",
+    "sha256": "80f2c248d17cb80f6aad6d492e6ece263c93c3ca20bed7ee91235288da0848c2"
+  },
+  "selection_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "test_rounds": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "training_cutoff": {
+    "season": 2026,
+    "round": 6,
+    "date": "2026-06-07"
+  },
+  "random_seed": 42,
+  "weather_included": false,
+  "simulation_interpretation": "Probabilities express model uncertainty, constructor variation, reliability, and ordinary race incidents. They are not guarantees.",
+  "scikit_learn_version": "1.9.0",
+  "evaluation_artifacts": {
+    "ranking_selection.csv": "da691bf4cdff401951cc9603ffd9f78c89ed190d8875de4305f08a479af894ae",
+    "ranking_test_scores.csv": "0706133d187c3440390b4481440fe0e500cb89772dbddcf058cd191170da55f5",
+    "current_model_test_scores.csv": "0706133d187c3440390b4481440fe0e500cb89772dbddcf058cd191170da55f5",
+    "pairwise_test_scores.csv": "d9046b13a7497f79ed694af13a147d0d0fc69ba0d4e6dff21170c889c0e0e141",
+    "simulation_selection.csv": "16004410a9a10f7b67d7af1061143cce5aa1b7ba1a92f60d170e0c813dd20db1",
+    "simulation_test_scores.csv": "2fe13b62c97c32fc34e62865974649c2e5d4d591eb0c2461cad1984ecd792def",
+    "probability_predictions.csv": "149f959e5383df0fb4c82b9cb9c61850f6895bc6598f9b4add79c89faa3433ce",
+    "probability_scores.csv": "3fdb04c34d488c052beff708b85f60ce31d483ae2397cc23af2817c7245fa962",
+    "calibration_selection.csv": "7305e0d39f61f9359211689fdb9b659680968c6f77bfd3e001bdebbffdac18e0",
+    "validation_report.json": "252bec17afdbca83debdc4975ebd4ec3f4872afe40d3d1be93f100afe81da639",
+    "model_summary.json": "a27b02bfe4d8a8e1a31317ef91b7f5271d2a81adc72de1911a5b1f8fff0dd4e8"
+  },
+  "model_artifacts": {
+    "ranking_model.joblib": "c6d71adb6f3efbdb0e3a54d73d18d6fc03506d52601f110a21a620d60de10e49",
+    "pairwise_candidate.joblib": "b835805c510e8b92ec0f54bf995f259c710b4f73023ea2d87cf33ac770470081",
+    "probability_model.joblib": "303b27ad29145e34e4067c8b9bf0497ed85ced41c782065e5878ba4dd51c3f80",
+    "model_metadata.json": "3f4c46f5d7ca57ff226d1e466c675acd8aed173fe72c492d8f0a1205492d43e2",
+    "calibration.json": "1c73b9fe9da3968627af63c312768cc9e525f10f91720435e10fc9d3b3e57730"
+  }
+}

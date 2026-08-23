@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checked_at": "2026-08-23T13:44:44.156578+00:00",
+  "checks": {
+    "selection_rounds_are_one_to_six": true,
+    "test_rounds_are_seven_to_eleven": true,
+    "training_contains_only_classified_results": true,
+    "one_simulated_winner_per_race": true,
+    "probabilities_are_bounded": true,
+    "preferred_probabilities_are_ordered": true,
+    "simulation_orders_are_complete": true,
+    "fixed_seed_is_reproducible": true,
+    "saved_models_exist": true,
+    "no_weather_inputs": true,
+    "dnf_is_separate_from_pace_training": true
+  },
+  "errors": []
+}

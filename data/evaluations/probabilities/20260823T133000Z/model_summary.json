@@ -1,0 +1,65 @@
+{
+  "selected_ranking_model": "post_qualifying_practice_weekend_70",
+  "ranking_model_retained": false,
+  "ranking_test": {
+    "average_spearman_correlation": 0.7535855448898927,
+    "average_mean_absolute_position_error": 2.8363636363636364,
+    "average_kendall_correlation": 0.6502164502164502,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "current_model_test": {
+    "average_spearman_correlation": 0.7535855448898927,
+    "average_mean_absolute_position_error": 2.8363636363636364,
+    "average_kendall_correlation": 0.6502164502164502,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "best_pairwise_candidate": "pairwise_logistic_unweighted_c_0.1",
+  "pairwise_test": {
+    "average_spearman_correlation": 0.7456804065499718,
+    "average_mean_absolute_position_error": 2.9272727272727272,
+    "average_kendall_correlation": 0.6398268398268399,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "simulation_test": {
+    "average_spearman_correlation": 0.7474872953133823,
+    "average_mean_absolute_position_error": 2.9272727272727272,
+    "average_kendall_correlation": 0.6346320346320347,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "pairwise_test_races_beating_current": 2,
+  "selected_simulation": {
+    "driver_sigma": 0.35,
+    "constructor_sigma": 0.15,
+    "simulations_per_race": 10000
+  },
+  "calibration": {
+    "win": {
+      "use_calibration": true,
+      "retained_after_test": true,
+      "selection_raw_brier": 0.022620289562289564,
+      "selection_grouped_cv_brier": 0.017996726201325038
+    },
+    "podium": {
+      "use_calibration": false,
+      "retained_after_test": false,
+      "selection_raw_brier": 0.06992648316498316,
+      "selection_grouped_cv_brier": 0.07083528391529129
+    },
+    "top_10": {
+      "use_calibration": true,
+      "retained_after_test": false,
+      "selection_raw_brier": 0.22922542929292927,
+      "selection_grouped_cv_brier": 0.1935220446610743
+    },
+    "dnf": {
+      "use_calibration": true,
+      "retained_after_test": false,
+      "selection_raw_brier": 0.148322015993266,
+      "selection_grouped_cv_brier": 0.14546080933125058
+    }
+  }
+}

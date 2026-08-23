@@ -1,0 +1,11 @@
+model_id,model_family,history_scheme,parameters,feature_count,selection_races,average_spearman_correlation,average_mean_absolute_position_error,average_kendall_correlation,winner_accuracy,average_top_three_overlap,spearman_change_from_current,races_beating_current,eligible_for_use,selected_model
+post_qualifying_practice_weekend_70,ridge_support_with_qualifying_blend,unweighted,weekend_weight=0.7,27,6,0.5738753999623565,4.136363636363636,0.47763347763347763,0.8333333333333334,0.611111111111111,0.0,0,True,True
+pairwise_logistic_unweighted_c_0.01,pairwise_logistic,unweighted,C=0.01,27,6,0.5437605872388481,4.393939393939394,0.4588744588744589,0.5,0.5,-0.030114812723508355,2,False,False
+pairwise_logistic_unweighted_c_0.1,pairwise_logistic,unweighted,C=0.1,27,6,0.5452663278750235,4.393939393939394,0.455988455988456,0.5,0.5,-0.028609072087332987,3,False,False
+pairwise_logistic_unweighted_c_1,pairwise_logistic,unweighted,C=1,27,6,0.5416901938641069,4.424242424242425,0.455988455988456,0.5,0.5,-0.0321852060982496,3,False,False
+pairwise_logistic_season_weighted_c_0.01,pairwise_logistic,season_weighted,C=0.01,33,6,0.5403726708074534,4.46969696969697,0.45310245310245306,0.3333333333333333,0.4444444444444444,-0.033502729154903044,0,False,False
+pairwise_logistic_season_weighted_c_0.1,pairwise_logistic,season_weighted,C=0.1,33,6,0.5448898927159797,4.4393939393939394,0.45310245310245306,0.3333333333333333,0.4444444444444444,-0.02898550724637683,1,False,False
+pairwise_logistic_season_weighted_c_1,pairwise_logistic,season_weighted,C=1,33,6,0.5409373235460192,4.484848484848485,0.45165945165945165,0.16666666666666666,0.4444444444444444,-0.03293807641633728,1,False,False
+pairwise_logistic_recent_20_c_0.01,pairwise_logistic,recent_20,C=0.01,27,6,0.48861283643892345,4.878787878787879,0.4025974025974026,0.16666666666666666,0.38888888888888884,-0.08526256352343303,0,False,False
+pairwise_logistic_recent_20_c_0.1,pairwise_logistic,recent_20,C=0.1,27,6,0.4908714473931865,4.833333333333333,0.39249639249639245,0.16666666666666666,0.4444444444444444,-0.08300395256916998,0,False,False
+pairwise_logistic_recent_20_c_1,pairwise_logistic,recent_20,C=1,27,6,0.47543760587238854,4.893939393939394,0.3838383838383838,0.16666666666666666,0.4444444444444444,-0.09843779408996794,0,False,False

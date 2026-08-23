@@ -1,0 +1,82 @@
+{
+  "model_id": "post_qualifying_practice_weekend_70",
+  "model_family": "ridge_support_with_qualifying_blend",
+  "history_scheme": "unweighted",
+  "feature_columns": [
+    "driver_prior_starts",
+    "driver_prior_seasons",
+    "driver_prior_classified_finishes",
+    "driver_recent_finish_score_5",
+    "driver_recent_finish_score_10",
+    "driver_circuit_prior_starts",
+    "driver_circuit_classified_finishes",
+    "driver_recent_teammate_delta_5",
+    "driver_recent_teammate_delta_10",
+    "constructor_prior_races",
+    "constructor_recent_finish_score_5",
+    "constructor_recent_finish_score_10",
+    "constructor_recent_dnf_rate_10",
+    "constructor_circuit_prior_races",
+    "practice_laps",
+    "practice_gap_percent",
+    "practice_best_lap_score",
+    "practice_sector_score",
+    "practice_sector_rank_score",
+    "long_run_laps",
+    "long_run_gap_percent",
+    "long_run_score",
+    "degradation_percent_per_lap",
+    "practice_compound_count",
+    "practice_missing",
+    "practice_overall_score",
+    "qualifying_weekend_score"
+  ],
+  "parameters": "weekend_weight=0.7",
+  "random_seed": 42,
+  "training_result_filter": "CLASSIFIED",
+  "training_cutoff_season": 2026,
+  "training_cutoff_round": 6,
+  "training_cutoff_date": "2026-06-07",
+  "training_rows": 1344,
+  "test_rounds": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "ranking_test": {
+    "average_spearman_correlation": 0.7535855448898927,
+    "average_mean_absolute_position_error": 2.8363636363636364,
+    "average_kendall_correlation": 0.6502164502164502,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "current_model_test": {
+    "average_spearman_correlation": 0.7535855448898927,
+    "average_mean_absolute_position_error": 2.8363636363636364,
+    "average_kendall_correlation": 0.6502164502164502,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "best_pairwise_candidate": "pairwise_logistic_unweighted_c_0.1",
+  "pairwise_test": {
+    "average_spearman_correlation": 0.7456804065499718,
+    "average_mean_absolute_position_error": 2.9272727272727272,
+    "average_kendall_correlation": 0.6398268398268399,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "simulation_test": {
+    "average_spearman_correlation": 0.7474872953133823,
+    "average_mean_absolute_position_error": 2.9272727272727272,
+    "average_kendall_correlation": 0.6346320346320347,
+    "winner_accuracy": 0.6,
+    "average_top_three_overlap": 0.5333333333333333
+  },
+  "pairwise_selected_on_selection": false,
+  "pairwise_repeatable_test_improvement": false,
+  "pairwise_test_races_beating_current": 2,
+  "weather_included": false,
+  "dnf_affects_driver_pace": false
+}
