@@ -1,0 +1,34 @@
+{
+  "retrieval_id": "20260823T130000Z",
+  "created_at": "2026-08-23T13:15:58.278481+00:00",
+  "source": "FastF1 session timing data and historical official race grids",
+  "practice_selection": "The latest available practice session before qualifying is used for each race.",
+  "circuit_profile_method": "Telemetry is calculated once per circuit from its earliest available qualifying session, then reused as a physical track profile. Tyre degradation remains race-specific.",
+  "fastf1_version": "3.8.3",
+  "python_version": "3.14.6",
+  "results_dataset": {
+    "path": "data/processed/fastf1/20260810T200317Z/race_results.csv",
+    "sha256": "cb054f9c2b28bd9ad3e389c6b78bbffd0fd5ff3ffadff360d76445c6397d2592"
+  },
+  "cache_directory": "data/cache/fastf1",
+  "weather_included": false,
+  "penalty_handling": "The final official grid is stored. Grid changes are recorded without inferring an unverified penalty cause. Live predictions require a cutoff-time grid input.",
+  "files": {
+    "qualifying_grid.csv": {
+      "sha256": "e248ccb9b669fc38986b707f5e30890861d34d8195a9c39601f86dc95d7c5782",
+      "bytes": 295551
+    },
+    "practice_summary.csv": {
+      "sha256": "b7b284fb35c0bb8d469e093d96056619ab56446dc23b0efb2cbc4c646a9c314b",
+      "bytes": 238314
+    },
+    "circuit_profiles.csv": {
+      "sha256": "5145ca1b051191f0fd74cfa3e19e134e728c82882ab10db32bbd7a5258dc8fb8",
+      "bytes": 19158
+    },
+    "validation_report.json": {
+      "sha256": "03f894515b4089a4a11afaf82e2a87303fdc5f2a315a4f67e865ab3ced65cde1",
+      "bytes": 598
+    }
+  }
+}

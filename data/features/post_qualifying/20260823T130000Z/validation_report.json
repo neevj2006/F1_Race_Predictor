@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checked_at": "2026-08-23T13:16:21.990082+00:00",
+  "feature_rows": 1640,
+  "race_count": 81,
+  "feature_count": 55,
+  "checks": {
+    "one_feature_row_per_driver_race": true,
+    "feature_keys_match_results": true,
+    "feature_values_complete": true,
+    "grid_snapshot_follows_qualifying": true,
+    "practice_precedes_qualifying": true,
+    "pre_weekend_dataset_unchanged": true,
+    "no_weather_features": true,
+    "no_target_columns_in_features": true
+  },
+  "errors": []
+}

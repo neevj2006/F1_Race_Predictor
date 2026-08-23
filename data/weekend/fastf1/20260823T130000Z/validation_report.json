@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "retrieval_id": "20260823T130000Z",
+  "race_count": 81,
+  "qualifying_rows": 1640,
+  "practice_rows": 1640,
+  "circuit_profiles": 81,
+  "practice_driver_coverage": 0.9908536585365854,
+  "profile_coverage": 1.0,
+  "checks": {
+    "qualifying_has_one_row_per_driver_race": true,
+    "qualifying_matches_result_grid": true,
+    "practice_has_one_row_per_driver_race": true,
+    "practice_matches_result_grid": true,
+    "one_circuit_profile_per_race": true,
+    "qualifying_precedes_grid_snapshot": true,
+    "no_weather_fields": true
+  },
+  "errors": [],
+  "warnings": []
+}
