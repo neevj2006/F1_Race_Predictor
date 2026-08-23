@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checked_at": "2026-08-23T11:53:26.382054+00:00",
+  "selected_model": "ridge_full_unweighted_alpha_100",
+  "training_rows": 1344,
+  "test_races": 5,
+  "prediction_rows": 110,
+  "compared_model_prediction_rows": 220,
+  "checks": {
+    "test_rounds_are_exactly_seven_through_eleven": true,
+    "training_contains_only_classified_results": true,
+    "training_cutoff_is_round_six": true,
+    "every_test_race_has_every_driver_once": true,
+    "predicted_positions_are_complete": true,
+    "one_score_per_test_race": true,
+    "saved_model_exists": true,
+    "saved_model_reproduces_predictions": true,
+    "fixed_seed_reproduces_predictions": true,
+    "performance_gate_passed": true
+  },
+  "errors": []
+}

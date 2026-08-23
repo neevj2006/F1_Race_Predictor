@@ -1,0 +1,221 @@
+model_id,model_family,feature_set,history_scheme,race_id,season,round,race_date,driver_id,driver_name,constructor_id,constructor_name,model_score,predicted_position,actual_position,actual_classification_status,absolute_position_error
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.9100195500309447,1,16,CLASSIFIED,15
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,russell,George Russell,mercedes,Mercedes,0.8358531973955904,2,2,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,max_verstappen,Max Verstappen,red_bull,Red Bull,0.825629789201059,3,4,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,norris,Lando Norris,mclaren,McLaren,0.8154888506230372,4,3,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,leclerc,Charles Leclerc,ferrari,Ferrari,0.8133397940172745,5,15,CLASSIFIED,10
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,piastri,Oscar Piastri,mclaren,McLaren,0.8039890708580983,6,5,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,hamilton,Lewis Hamilton,ferrari,Ferrari,0.7838105552575084,7,1,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6403799037609782,8,7,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,hadjar,Isack Hadjar,red_bull,Red Bull,0.6217402562754648,9,6,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,bearman,Oliver Bearman,haas,Haas F1 Team,0.6153153559510827,10,17,CLASSIFIED,7
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,lawson,Liam Lawson,rb,RB F1 Team,0.6078980268091566,11,8,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5515635749555614,12,9,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5350301145906665,13,10,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,sainz,Carlos Sainz,williams,Williams,0.5331242017815783,14,12,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,ocon,Esteban Ocon,haas,Haas F1 Team,0.49360477965614563,15,13,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,hulkenberg,Nico Hülkenberg,audi,Audi,0.4759328933388385,16,20,DNF,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,bortoleto,Gabriel Bortoleto,audi,Audi,0.4646224307873608,17,11,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,albon,Alexander Albon,williams,Williams,0.4605531250390095,18,18,NC,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,alonso,Fernando Alonso,aston_martin,Aston Martin,0.4446845966670854,19,19,DNF,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,stroll,Lance Stroll,aston_martin,Aston Martin,0.3317455374067503,20,22,DNF,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.264976804871861,21,21,DNF,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-07,2026,7,2026-06-14,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.26405487130244615,22,14,CLASSIFIED,8
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,norris,Lando Norris,mclaren,McLaren,0.836696233287818,1,7,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,russell,George Russell,mercedes,Mercedes,0.8288994342880828,2,1,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8287643951019821,3,3,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,max_verstappen,Max Verstappen,red_bull,Red Bull,0.820517506795216,4,2,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8154939151397351,5,5,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,piastri,Oscar Piastri,mclaren,McLaren,0.7897644237253085,6,4,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,leclerc,Charles Leclerc,ferrari,Ferrari,0.7698092734644773,7,8,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,hadjar,Isack Hadjar,red_bull,Red Bull,0.6702318543120702,8,6,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6619268300390876,9,13,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,lawson,Liam Lawson,rb,RB F1 Team,0.6301088570017863,10,9,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,bearman,Oliver Bearman,haas,Haas F1 Team,0.5760538509287492,11,14,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5565773231829512,12,10,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,sainz,Carlos Sainz,williams,Williams,0.5455918456325707,13,20,DNF,7
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5450086738154772,14,15,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,ocon,Esteban Ocon,haas,Haas F1 Team,0.48678520566833405,15,16,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,hulkenberg,Nico Hülkenberg,audi,Audi,0.46010998149389737,16,12,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,bortoleto,Gabriel Bortoleto,audi,Audi,0.4567041673081168,17,11,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,albon,Alexander Albon,williams,Williams,0.45461631619490134,18,17,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,alonso,Fernando Alonso,aston_martin,Aston Martin,0.42557287734026206,19,18,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,stroll,Lance Stroll,aston_martin,Aston Martin,0.29043001850714717,20,19,DNF,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.2616975193181417,21,21,DNF,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-08,2026,8,2026-06-28,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.26055359908970027,22,22,DNF,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,max_verstappen,Max Verstappen,red_bull,Red Bull,0.8473735590759703,1,20,CLASSIFIED,19
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,russell,George Russell,mercedes,Mercedes,0.8366219667875892,2,2,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8242649070756433,3,15,CLASSIFIED,12
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8234062129981905,4,3,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,norris,Lando Norris,mclaren,McLaren,0.8161644499747631,5,4,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,piastri,Oscar Piastri,mclaren,McLaren,0.7834322275107946,6,11,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,leclerc,Charles Leclerc,ferrari,Ferrari,0.7452483006672194,7,1,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,hadjar,Isack Hadjar,red_bull,Red Bull,0.6997722345804552,8,5,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6597005565420307,9,10,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,lawson,Liam Lawson,rb,RB F1 Team,0.6263590368541552,10,6,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5694529436281401,11,9,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5680553778927365,12,7,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,bearman,Oliver Bearman,haas,Haas F1 Team,0.538269471687327,13,12,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,sainz,Carlos Sainz,williams,Williams,0.5159649474437524,14,17,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,bortoleto,Gabriel Bortoleto,audi,Audi,0.47525995027512097,15,8,CLASSIFIED,7
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,hulkenberg,Nico Hülkenberg,audi,Audi,0.4698348765375806,16,22,DNF,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,ocon,Esteban Ocon,haas,Haas F1 Team,0.4511695119575469,17,13,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,albon,Alexander Albon,williams,Williams,0.45114117129509756,18,21,DNF,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,alonso,Fernando Alonso,aston_martin,Aston Martin,0.37446439586511593,19,18,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,stroll,Lance Stroll,aston_martin,Aston Martin,0.2641088793983686,20,19,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.24466685375731434,21,14,CLASSIFIED,7
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-09,2026,9,2026-07-05,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.24352293352887294,22,16,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8623759393228679,1,4,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,russell,George Russell,mercedes,Mercedes,0.8358385562225557,2,22,DNF,20
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,norris,Lando Norris,mclaren,McLaren,0.8071161573109462,3,7,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,leclerc,Charles Leclerc,ferrari,Ferrari,0.771724341725043,4,2,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,max_verstappen,Max Verstappen,red_bull,Red Bull,0.7623213982212159,5,3,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.7605778053504348,6,1,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,piastri,Oscar Piastri,mclaren,McLaren,0.7363987462282537,7,5,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,hadjar,Isack Hadjar,red_bull,Red Bull,0.7101964897050345,8,6,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,lawson,Liam Lawson,rb,RB F1 Team,0.6711699081687403,9,12,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.631639449094435,10,11,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.6153435171893875,11,9,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5537659095068705,12,10,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,bearman,Oliver Bearman,haas,Haas F1 Team,0.5224599253235473,13,14,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,bortoleto,Gabriel Bortoleto,audi,Audi,0.4959985782120005,14,8,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,ocon,Esteban Ocon,haas,Haas F1 Team,0.4752349577789752,15,17,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,hulkenberg,Nico Hülkenberg,audi,Audi,0.47388661043264224,16,13,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,sainz,Carlos Sainz,williams,Williams,0.4611383821492456,17,16,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,albon,Alexander Albon,williams,Williams,0.41615721983576537,18,15,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,alonso,Fernando Alonso,aston_martin,Aston Martin,0.3363734743717117,19,19,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.26226652125968175,20,21,DNF,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,stroll,Lance Stroll,aston_martin,Aston Martin,0.2571629082546932,21,20,DNF,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-10,2026,10,2026-07-19,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.25396101936722926,22,18,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8668571698092864,1,5,CLASSIFIED,4
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,russell,George Russell,mercedes,Mercedes,0.837749894575385,2,7,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,norris,Lando Norris,mclaren,McLaren,0.8044237313161684,3,1,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,leclerc,Charles Leclerc,ferrari,Ferrari,0.7961034473209139,4,4,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.7759822350556479,5,3,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,piastri,Oscar Piastri,mclaren,McLaren,0.7675514744463545,6,20,DNF,14
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,max_verstappen,Max Verstappen,red_bull,Red Bull,0.764259678837,7,2,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,hadjar,Isack Hadjar,red_bull,Red Bull,0.712633939155403,8,6,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,lawson,Liam Lawson,rb,RB F1 Team,0.6579389134556977,9,8,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.6321563193323186,10,10,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6263987009123061,11,12,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5575786498088681,12,15,CLASSIFIED,3
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,bortoleto,Gabriel Bortoleto,audi,Audi,0.5246182244935929,13,11,CLASSIFIED,2
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,bearman,Oliver Bearman,haas,Haas F1 Team,0.49109747339456655,14,19,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,hulkenberg,Nico Hülkenberg,audi,Audi,0.48879854103322984,15,9,CLASSIFIED,6
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,ocon,Esteban Ocon,haas,Haas F1 Team,0.44510682203227264,16,16,CLASSIFIED,0
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,sainz,Carlos Sainz,williams,Williams,0.41382327077450765,17,18,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,albon,Alexander Albon,williams,Williams,0.4026391227798831,18,17,CLASSIFIED,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,alonso,Fernando Alonso,aston_martin,Aston Martin,0.30773448211223114,19,14,CLASSIFIED,5
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.2549265660200313,20,21,DNF,1
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,stroll,Lance Stroll,aston_martin,Aston Martin,0.23867484789333204,21,13,CLASSIFIED,8
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,2026-11,2026,11,2026-07-26,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.23654044651399092,22,22,DNF,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8890797561750177,1,16,CLASSIFIED,15
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,russell,George Russell,mercedes,Mercedes,0.8358098471480118,2,2,CLASSIFIED,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,leclerc,Charles Leclerc,ferrari,Ferrari,0.8280866377878631,3,15,CLASSIFIED,12
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,piastri,Oscar Piastri,mclaren,McLaren,0.8279430370218006,4,5,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8267744471898237,5,1,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,norris,Lando Norris,mclaren,McLaren,0.8200261149876439,6,3,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,max_verstappen,Max Verstappen,red_bull,Red Bull,0.809277813817194,7,4,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6378220531059463,8,7,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,hadjar,Isack Hadjar,red_bull,Red Bull,0.5903237169907376,9,6,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,ocon,Esteban Ocon,haas,Haas F1 Team,0.5516072365850815,10,13,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,bearman,Oliver Bearman,haas,Haas F1 Team,0.5490835699984429,11,17,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5310243044600702,12,10,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,alonso,Fernando Alonso,aston_martin,Aston Martin,0.5272681297777903,13,19,DNF,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,lawson,Liam Lawson,rb,RB F1 Team,0.511303377948078,14,8,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,albon,Alexander Albon,williams,Williams,0.5008786939487544,15,18,NC,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,sainz,Carlos Sainz,williams,Williams,0.5003416426871196,16,12,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,hulkenberg,Nico Hülkenberg,audi,Audi,0.46833241098121686,17,20,DNF,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,stroll,Lance Stroll,aston_martin,Aston Martin,0.46596746830435903,18,22,DNF,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.46078778265068854,19,9,CLASSIFIED,10
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,bortoleto,Gabriel Bortoleto,audi,Audi,0.4491270557051454,20,11,CLASSIFIED,9
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.3044538944364918,21,14,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-07,2026,7,2026-06-14,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.2898993928595331,22,21,DNF,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8539086864009812,1,3,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8476928008073634,2,5,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,russell,George Russell,mercedes,Mercedes,0.8450759503692312,3,1,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,piastri,Oscar Piastri,mclaren,McLaren,0.8417213918206807,4,4,CLASSIFIED,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,norris,Lando Norris,mclaren,McLaren,0.8245383665653045,5,7,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,max_verstappen,Max Verstappen,red_bull,Red Bull,0.809277813817194,6,2,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,leclerc,Charles Leclerc,ferrari,Ferrari,0.7986811806142141,7,8,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,hadjar,Isack Hadjar,red_bull,Red Bull,0.697792455858819,8,6,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6583610581859974,9,13,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,bearman,Oliver Bearman,haas,Haas F1 Team,0.5498543174956115,10,14,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,lawson,Liam Lawson,rb,RB F1 Team,0.5463031990592123,11,9,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,alonso,Fernando Alonso,aston_martin,Aston Martin,0.5274868511509906,12,18,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,ocon,Esteban Ocon,haas,Haas F1 Team,0.525079765616493,13,16,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5119371419035151,14,15,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,albon,Alexander Albon,williams,Williams,0.5008786939487544,15,17,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,sainz,Carlos Sainz,williams,Williams,0.5003416426871196,16,20,DNF,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.4694626606683257,17,10,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,stroll,Lance Stroll,aston_martin,Aston Martin,0.4661861896775594,18,19,DNF,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,hulkenberg,Nico Hülkenberg,audi,Audi,0.44660103158406067,19,12,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,bortoleto,Gabriel Bortoleto,audi,Audi,0.4332241674282817,20,11,CLASSIFIED,9
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.3044538944364918,21,21,DNF,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-08,2026,8,2026-06-28,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.2898993928595331,22,22,DNF,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8569589040285829,1,3,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,russell,George Russell,mercedes,Mercedes,0.8450759503692312,2,2,CLASSIFIED,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8437984891196519,3,15,CLASSIFIED,12
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,piastri,Oscar Piastri,mclaren,McLaren,0.8324552885994613,4,11,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,norris,Lando Norris,mclaren,McLaren,0.8245383665653045,5,4,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,max_verstappen,Max Verstappen,red_bull,Red Bull,0.8080824550634859,6,20,CLASSIFIED,14
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,leclerc,Charles Leclerc,ferrari,Ferrari,0.802169527286912,7,1,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,hadjar,Isack Hadjar,red_bull,Red Bull,0.7032364164662882,8,5,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6387290338162889,9,10,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,lawson,Liam Lawson,rb,RB F1 Team,0.5632014611875664,10,6,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,bearman,Oliver Bearman,haas,Haas F1 Team,0.559120420716831,11,12,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,alonso,Fernando Alonso,aston_martin,Aston Martin,0.5364579710940349,12,18,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5265206670104599,13,9,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,ocon,Esteban Ocon,haas,Haas F1 Team,0.525079765616493,14,13,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5050366555301432,15,7,CLASSIFIED,8
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,albon,Alexander Albon,williams,Williams,0.49789922288907695,16,21,DNF,5
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,sainz,Carlos Sainz,williams,Williams,0.4973621716274421,17,17,CLASSIFIED,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,hulkenberg,Nico Hülkenberg,audi,Audi,0.4503526200814438,18,22,DNF,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,stroll,Lance Stroll,aston_martin,Aston Martin,0.44908448708298987,19,19,CLASSIFIED,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,bortoleto,Gabriel Bortoleto,audi,Audi,0.44191951609353947,20,8,CLASSIFIED,12
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.3390157874918346,21,14,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-09,2026,9,2026-07-05,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.331619828060247,22,16,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8492697665661968,1,4,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,russell,George Russell,mercedes,Mercedes,0.841895921068617,2,22,DNF,20
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,norris,Lando Norris,mclaren,McLaren,0.8245383665653045,3,7,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,leclerc,Charles Leclerc,ferrari,Ferrari,0.8095242495942669,4,2,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.8084192580709503,5,1,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,piastri,Oscar Piastri,mclaren,McLaren,0.796903587824497,6,5,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,hadjar,Isack Hadjar,red_bull,Red Bull,0.7702753653209179,7,6,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,max_verstappen,Max Verstappen,red_bull,Red Bull,0.7499995975640195,8,3,CLASSIFIED,5
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6441505426050023,9,11,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,ocon,Esteban Ocon,haas,Haas F1 Team,0.5516072365850815,10,17,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,lawson,Liam Lawson,rb,RB F1 Team,0.5304627833748127,11,12,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,bearman,Oliver Bearman,haas,Haas F1 Team,0.5218848967889121,12,14,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5194104158975306,13,10,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,sainz,Carlos Sainz,williams,Williams,0.5126444156173366,14,16,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,alonso,Fernando Alonso,aston_martin,Aston Martin,0.5108312830721429,15,19,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,albon,Alexander Albon,williams,Williams,0.4902333679830086,16,15,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.47229797771738946,17,9,CLASSIFIED,8
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,stroll,Lance Stroll,aston_martin,Aston Martin,0.44930320845619026,18,20,DNF,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,hulkenberg,Nico Hülkenberg,audi,Audi,0.4447267632393013,19,13,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,bortoleto,Gabriel Bortoleto,audi,Audi,0.436293659251397,20,8,CLASSIFIED,12
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.3732307400627326,21,21,DNF,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-10,2026,10,2026-07-19,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.3447876054615787,22,18,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,hamilton,Lewis Hamilton,ferrari,Ferrari,0.8523543452314563,1,5,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,russell,George Russell,mercedes,Mercedes,0.8516079828564164,2,7,CLASSIFIED,5
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,norris,Lando Norris,mclaren,McLaren,0.8324552885994613,3,1,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,piastri,Oscar Piastri,mclaren,McLaren,0.796903587824497,4,20,DNF,16
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,0.7967896038308808,5,3,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,leclerc,Charles Leclerc,ferrari,Ferrari,0.7900644973710023,6,4,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,hadjar,Isack Hadjar,red_bull,Red Bull,0.76678701864822,7,6,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,max_verstappen,Max Verstappen,red_bull,Red Bull,0.7499995975640195,8,2,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,gasly,Pierre Gasly,alpine,Alpine F1 Team,0.6303900910892076,9,12,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,lawson,Liam Lawson,rb,RB F1 Team,0.5925801869353303,10,8,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,0.5895986571396078,11,10,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,ocon,Esteban Ocon,haas,Haas F1 Team,0.5516072365850815,12,16,CLASSIFIED,4
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,bearman,Oliver Bearman,haas,Haas F1 Team,0.5218848967889121,13,19,CLASSIFIED,6
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,colapinto,Franco Colapinto,alpine,Alpine F1 Team,0.5165494665206475,14,15,CLASSIFIED,1
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,albon,Alexander Albon,williams,Williams,0.49736911809263085,15,17,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,sainz,Carlos Sainz,williams,Williams,0.4955198762329567,16,18,CLASSIFIED,2
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,alonso,Fernando Alonso,aston_martin,Aston Martin,0.4648309685183049,17,14,CLASSIFIED,3
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,hulkenberg,Nico Hülkenberg,audi,Audi,0.4447267632393013,18,9,CLASSIFIED,9
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,bortoleto,Gabriel Bortoleto,audi,Audi,0.436293659251397,19,11,CLASSIFIED,8
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,stroll,Lance Stroll,aston_martin,Aston Martin,0.4111893058483938,20,13,CLASSIFIED,7
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,perez,Sergio Pérez,cadillac,Cadillac F1 Team,0.3732307400627326,21,21,DNF,0
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,2026-11,2026,11,2026-07-26,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,0.30722811003002687,22,22,DNF,0

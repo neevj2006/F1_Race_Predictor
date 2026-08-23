@@ -1,0 +1,65 @@
+{
+  "model_id": "ridge_full_unweighted_alpha_100",
+  "model_family": "ridge",
+  "feature_set": "full",
+  "history_scheme": "unweighted",
+  "feature_columns": [
+    "driver_prior_starts",
+    "driver_prior_seasons",
+    "driver_prior_classified_finishes",
+    "driver_recent_finish_score_5",
+    "driver_recent_finish_score_10",
+    "driver_circuit_prior_starts",
+    "driver_circuit_classified_finishes",
+    "driver_recent_teammate_delta_5",
+    "driver_recent_teammate_delta_10",
+    "constructor_prior_races",
+    "constructor_recent_finish_score_5",
+    "constructor_recent_finish_score_10",
+    "constructor_recent_dnf_rate_10",
+    "constructor_circuit_prior_races"
+  ],
+  "parameters": {
+    "alpha": 100.0
+  },
+  "random_seed": 42,
+  "training_result_filter": "CLASSIFIED",
+  "training_cutoff_season": 2026,
+  "training_cutoff_round": 6,
+  "training_cutoff_date": "2026-06-07",
+  "training_rows": 1344,
+  "test_rounds": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "feature_dataset": "data/features/fastf1/20260810T200317Z/pre_weekend_features.csv",
+  "target_dataset": "data/features/fastf1/20260810T200317Z/race_targets.csv",
+  "baseline_benchmark": {
+    "baseline": "driver_form_recent_5",
+    "average_spearman_correlation": 0.7014116318464144,
+    "races": 5
+  },
+  "evaluation": {
+    "model_id": "ridge_full_unweighted_alpha_100",
+    "model_family": "ridge",
+    "feature_set": "full",
+    "history_scheme": "unweighted",
+    "test_races": 5,
+    "average_spearman_correlation": 0.7066064370412196,
+    "average_mean_absolute_position_error": 3.2727272727272725,
+    "average_kendall_correlation": 0.5792207792207792,
+    "winner_accuracy": 0.0,
+    "average_top_three_overlap": 0.3333333333333333,
+    "races_beating_ridge": 0,
+    "selected_model": true
+  },
+  "performance_gate": {
+    "required_spearman": 0.6,
+    "must_beat_baseline": true,
+    "passed": true
+  },
+  "scikit_learn_version": "1.9.0"
+}

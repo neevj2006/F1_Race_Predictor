@@ -1,0 +1,3 @@
+model_id,model_family,feature_set,history_scheme,test_races,average_spearman_correlation,average_mean_absolute_position_error,average_kendall_correlation,winner_accuracy,average_top_three_overlap,races_beating_ridge,selected_model
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,5,0.7066064370412196,3.2727272727272725,0.5792207792207792,0.0,0.3333333333333333,0,True
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,5,0.6124223602484472,4.1454545454545455,0.47186147186147187,0.0,0.4,0,False

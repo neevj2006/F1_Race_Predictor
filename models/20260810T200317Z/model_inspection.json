@@ -1,0 +1,62 @@
+{
+  "model_id": "ridge_full_unweighted_alpha_100",
+  "intercept": 0.5594001123841352,
+  "feature_effects": [
+    {
+      "feature": "driver_recent_finish_score_5",
+      "standardized_coefficient": 0.0543885836971857
+    },
+    {
+      "feature": "constructor_recent_finish_score_5",
+      "standardized_coefficient": 0.05300401965726696
+    },
+    {
+      "feature": "driver_recent_finish_score_10",
+      "standardized_coefficient": 0.04821625665989798
+    },
+    {
+      "feature": "constructor_recent_finish_score_10",
+      "standardized_coefficient": 0.03357389673977328
+    },
+    {
+      "feature": "driver_circuit_prior_starts",
+      "standardized_coefficient": -0.022610836431164273
+    },
+    {
+      "feature": "driver_recent_teammate_delta_10",
+      "standardized_coefficient": 0.0158228272916522
+    },
+    {
+      "feature": "constructor_recent_dnf_rate_10",
+      "standardized_coefficient": -0.015745903138246767
+    },
+    {
+      "feature": "driver_prior_classified_finishes",
+      "standardized_coefficient": 0.013318104569434277
+    },
+    {
+      "feature": "constructor_circuit_prior_races",
+      "standardized_coefficient": 0.007239992988425739
+    },
+    {
+      "feature": "driver_recent_teammate_delta_5",
+      "standardized_coefficient": 0.004017480672976026
+    },
+    {
+      "feature": "driver_prior_starts",
+      "standardized_coefficient": 0.0035702496907480613
+    },
+    {
+      "feature": "driver_circuit_classified_finishes",
+      "standardized_coefficient": 0.0030638523832034826
+    },
+    {
+      "feature": "constructor_prior_races",
+      "standardized_coefficient": 0.0030487548270635703
+    },
+    {
+      "feature": "driver_prior_seasons",
+      "standardized_coefficient": 0.0009472615558378218
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+model_id,segment_type,segment,driver_rows,mean_absolute_position_error
+ridge_full_unweighted_alpha_100,classification,DNF,16,3.75
+ridge_full_unweighted_alpha_100,classification,classified,93,3.225806451612903
+ridge_full_unweighted_alpha_100,classification,other_exceptional,1,0.0
+ridge_full_unweighted_alpha_100,experience,experienced,105,3.3142857142857145
+ridge_full_unweighted_alpha_100,experience,rookie,5,2.4
+ridge_full_unweighted_alpha_100,field,backmarker,35,3.6857142857142855
+ridge_full_unweighted_alpha_100,field,front_runner,35,2.4571428571428573
+ridge_full_unweighted_alpha_100,field,midfield,40,3.625

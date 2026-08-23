@@ -1,0 +1,166 @@
+{
+  "model_id": "ridge_full_unweighted_alpha_100",
+  "largest_errors": [
+    {
+      "race_id": "2026-10",
+      "driver_id": "russell",
+      "driver_name": "George Russell",
+      "constructor_id": "mercedes",
+      "predicted_position": 2,
+      "actual_position": 22,
+      "actual_classification_status": "DNF",
+      "absolute_position_error": 20
+    },
+    {
+      "race_id": "2026-09",
+      "driver_id": "max_verstappen",
+      "driver_name": "Max Verstappen",
+      "constructor_id": "red_bull",
+      "predicted_position": 1,
+      "actual_position": 20,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 19
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "constructor_id": "mercedes",
+      "predicted_position": 1,
+      "actual_position": 16,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 15
+    },
+    {
+      "race_id": "2026-11",
+      "driver_id": "piastri",
+      "driver_name": "Oscar Piastri",
+      "constructor_id": "mclaren",
+      "predicted_position": 6,
+      "actual_position": 20,
+      "actual_classification_status": "DNF",
+      "absolute_position_error": 14
+    },
+    {
+      "race_id": "2026-09",
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "constructor_id": "mercedes",
+      "predicted_position": 3,
+      "actual_position": 15,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 12
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "leclerc",
+      "driver_name": "Charles Leclerc",
+      "constructor_id": "ferrari",
+      "predicted_position": 5,
+      "actual_position": 15,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 10
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "constructor_id": "cadillac",
+      "predicted_position": 22,
+      "actual_position": 14,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 8
+    },
+    {
+      "race_id": "2026-11",
+      "driver_id": "stroll",
+      "driver_name": "Lance Stroll",
+      "constructor_id": "aston_martin",
+      "predicted_position": 21,
+      "actual_position": 13,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 8
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "constructor_id": "haas",
+      "predicted_position": 10,
+      "actual_position": 17,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 7
+    },
+    {
+      "race_id": "2026-08",
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "constructor_id": "williams",
+      "predicted_position": 13,
+      "actual_position": 20,
+      "actual_classification_status": "DNF",
+      "absolute_position_error": 7
+    },
+    {
+      "race_id": "2026-09",
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "constructor_id": "audi",
+      "predicted_position": 15,
+      "actual_position": 8,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 7
+    },
+    {
+      "race_id": "2026-09",
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "constructor_id": "cadillac",
+      "predicted_position": 21,
+      "actual_position": 14,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 7
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "constructor_id": "audi",
+      "predicted_position": 17,
+      "actual_position": 11,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 6
+    },
+    {
+      "race_id": "2026-07",
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "constructor_id": "ferrari",
+      "predicted_position": 7,
+      "actual_position": 1,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 6
+    },
+    {
+      "race_id": "2026-08",
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "constructor_id": "audi",
+      "predicted_position": 17,
+      "actual_position": 11,
+      "actual_classification_status": "CLASSIFIED",
+      "absolute_position_error": 6
+    }
+  ],
+  "recurring_drivers_in_largest_errors": {
+    "antonelli": 2,
+    "perez": 2,
+    "bortoleto": 3
+  },
+  "dnf_mean_absolute_error": 3.75,
+  "classified_mean_absolute_error": 3.225806451612903,
+  "notes": [
+    "Exceptional results are evaluated in the final order but were excluded from pace-model training.",
+    "Circuit history is used as a prior summary and never as a guarantee of repeating a past result."
+  ]
+}

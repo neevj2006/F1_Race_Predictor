@@ -1,0 +1,35 @@
+{
+  "selection_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "test_rounds": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "model_frozen_after_round": 6,
+  "classified_results_only_for_training": true,
+  "recent_history_races": 20,
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "gradient_boosting_evaluated": true,
+  "gradient_selection_rule": "Higher average test Spearman than Ridge and better race-level Spearman in at least 3 of 5 races.",
+  "baseline_benchmark": {
+    "baseline": "driver_form_recent_5",
+    "average_spearman_correlation": 0.7014116318464144,
+    "races": 5
+  },
+  "selected_model": "ridge_full_unweighted_alpha_100",
+  "performance_gate_passed": true
+}

@@ -1,0 +1,31 @@
+model_id,model_family,feature_set,history_scheme,parameters,selection_races,average_spearman_correlation,average_mean_absolute_position_error,average_kendall_correlation,winner_accuracy,average_top_three_overlap
+ridge_driver_only_unweighted_alpha_0.1,ridge,driver_only,unweighted,"{""alpha"": 0.1}",6,0.36928289102202144,5.454545454545454,0.26839826839826836,0.16666666666666666,0.27777777777777773
+ridge_driver_only_unweighted_alpha_1,ridge,driver_only,unweighted,"{""alpha"": 1.0}",6,0.3696593261810653,5.454545454545454,0.26695526695526695,0.16666666666666666,0.27777777777777773
+ridge_driver_only_unweighted_alpha_10,ridge,driver_only,unweighted,"{""alpha"": 10.0}",6,0.36570675701110483,5.484848484848484,0.26551226551226553,0.16666666666666666,0.27777777777777773
+ridge_driver_only_unweighted_alpha_100,ridge,driver_only,unweighted,"{""alpha"": 100.0}",6,0.37794089968003014,5.484848484848484,0.2698412698412698,0.16666666666666666,0.27777777777777773
+ridge_driver_only_season_weighted_alpha_0.1,ridge,driver_only,season_weighted,"{""alpha"": 0.1}",6,0.378317334839074,5.46969696969697,0.27272727272727276,0.0,0.2222222222222222
+ridge_driver_only_season_weighted_alpha_1,ridge,driver_only,season_weighted,"{""alpha"": 1.0}",6,0.3702239789196311,5.515151515151516,0.26406926406926406,0.0,0.2222222222222222
+ridge_driver_only_season_weighted_alpha_10,ridge,driver_only,season_weighted,"{""alpha"": 10.0}",6,0.3738001129305477,5.5,0.26406926406926406,0.16666666666666666,0.2222222222222222
+ridge_driver_only_season_weighted_alpha_100,ridge,driver_only,season_weighted,"{""alpha"": 100.0}",6,0.35968379446640314,5.606060606060606,0.2554112554112554,0.0,0.27777777777777773
+ridge_driver_only_recent_20_alpha_0.1,ridge,driver_only,recent_20,"{""alpha"": 0.1}",6,0.37907020515716167,5.409090909090909,0.2741702741702742,0.0,0.2222222222222222
+ridge_driver_only_recent_20_alpha_1,ridge,driver_only,recent_20,"{""alpha"": 1.0}",6,0.37361189535102585,5.393939393939394,0.26695526695526695,0.16666666666666666,0.2222222222222222
+ridge_driver_only_recent_20_alpha_10,ridge,driver_only,recent_20,"{""alpha"": 10.0}",6,0.37361189535102585,5.454545454545454,0.26839826839826836,0.16666666666666666,0.2222222222222222
+ridge_driver_only_recent_20_alpha_100,ridge,driver_only,recent_20,"{""alpha"": 100.0}",6,0.367965367965368,5.515151515151516,0.26406926406926406,0.16666666666666666,0.2222222222222222
+ridge_full_unweighted_alpha_0.1,ridge,full,unweighted,"{""alpha"": 0.1}",6,0.4005270092226614,5.378787878787879,0.2987012987012987,0.16666666666666666,0.2222222222222222
+ridge_full_unweighted_alpha_1,ridge,full,unweighted,"{""alpha"": 1.0}",6,0.39789196310935443,5.378787878787879,0.2972582972582973,0.16666666666666666,0.2222222222222222
+ridge_full_unweighted_alpha_10,ridge,full,unweighted,"{""alpha"": 10.0}",6,0.3943158290984378,5.3939393939393945,0.2958152958152958,0.16666666666666666,0.2222222222222222
+ridge_full_unweighted_alpha_100,ridge,full,unweighted,"{""alpha"": 100.0}",6,0.41389045736871827,5.303030303030304,0.31313131313131315,0.16666666666666666,0.2222222222222222
+ridge_full_season_weighted_alpha_0.1,ridge,full,season_weighted,"{""alpha"": 0.1}",6,0.41031432335780166,5.333333333333333,0.30014430014430016,0.16666666666666666,0.16666666666666666
+ridge_full_season_weighted_alpha_1,ridge,full,season_weighted,"{""alpha"": 1.0}",6,0.4088085827216262,5.363636363636363,0.2987012987012987,0.16666666666666666,0.16666666666666666
+ridge_full_season_weighted_alpha_10,ridge,full,season_weighted,"{""alpha"": 10.0}",6,0.40429136081309996,5.3939393939393945,0.29437229437229434,0.16666666666666666,0.16666666666666666
+ridge_full_season_weighted_alpha_100,ridge,full,season_weighted,"{""alpha"": 100.0}",6,0.39582156973461324,5.454545454545454,0.28715728715728717,0.16666666666666666,0.16666666666666666
+ridge_full_recent_20_alpha_0.1,ridge,full,recent_20,"{""alpha"": 0.1}",6,0.38396386222473183,5.5,0.27705627705627706,0.0,0.2222222222222222
+ridge_full_recent_20_alpha_1,ridge,full,recent_20,"{""alpha"": 1.0}",6,0.383587427065688,5.484848484848484,0.2756132756132756,0.0,0.27777777777777773
+ridge_full_recent_20_alpha_10,ridge,full,recent_20,"{""alpha"": 10.0}",6,0.38452851496329754,5.515151515151516,0.27994227994227994,0.16666666666666666,0.2222222222222222
+ridge_full_recent_20_alpha_100,ridge,full,recent_20,"{""alpha"": 100.0}",6,0.3965744400527009,5.46969696969697,0.29004329004329005,0.16666666666666666,0.2222222222222222
+gradient_boosting_driver_only_unweighted,gradient_boosting,driver_only,unweighted,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.39808018068887635,5.378787878787879,0.27994227994227994,0.16666666666666666,0.38888888888888884
+gradient_boosting_driver_only_season_weighted,gradient_boosting,driver_only,season_weighted,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.40316205533596844,5.43939393939394,0.28138528138528135,0.16666666666666666,0.3333333333333333
+gradient_boosting_driver_only_recent_20,gradient_boosting,driver_only,recent_20,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.41012610577827974,5.454545454545454,0.29292929292929293,0.16666666666666666,0.27777777777777773
+gradient_boosting_full_unweighted,gradient_boosting,full,unweighted,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.4027856201769245,5.46969696969697,0.29292929292929293,0.16666666666666666,0.2222222222222222
+gradient_boosting_full_season_weighted,gradient_boosting,full,season_weighted,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.41709015622059104,5.303030303030303,0.3088023088023088,0.16666666666666666,0.3333333333333333
+gradient_boosting_full_recent_20,gradient_boosting,full,recent_20,"{""learning_rate"": 0.05, ""max_depth"": 2, ""min_samples_leaf"": 10, ""n_estimators"": 100}",6,0.39939770374552985,5.439393939393939,0.2987012987012987,0.0,0.2222222222222222
