@@ -8,8 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_ROOT = PROJECT_ROOT / "data" / "raw" / "fastf1"
 PROCESSED_ROOT = PROJECT_ROOT / "data" / "processed" / "fastf1"
 YEARS = range(2023, 2027)
@@ -59,6 +58,16 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         help="Output directory. Defaults to data/processed/fastf1/<retrieval>.",
+    )
+    parser.add_argument(
+        "--input-dir",
+        type=Path,
+        help="Explicit raw retrieval directory. Takes precedence over --retrieval.",
+    )
+    parser.add_argument(
+        "--years",
+        default="2023,2024,2025,2026",
+        help="Comma-separated seasons to normalize.",
     )
     return parser.parse_args()
 
@@ -121,9 +130,7 @@ def classification_status(
 ) -> str:
     if source_status == "Disqualified":
         return "DSQ"
-    if source_status == "Did not start" or (
-        source_status == "Withdrew" and laps_completed == 0
-    ):
+    if source_status == "Did not start" or (source_status == "Withdrew" and laps_completed == 0):
         return "DNS"
     if position_text.isdigit():
         return "CLASSIFIED"
@@ -169,7 +176,7 @@ def normalize_result(
         "driver_code": driver.get("code", ""),
         "driver_given_name": driver["givenName"],
         "driver_family_name": driver["familyName"],
-        "driver_name": f'{driver["givenName"]} {driver["familyName"]}',
+        "driver_name": f"{driver['givenName']} {driver['familyName']}",
         "driver_date_of_birth": driver["dateOfBirth"],
         "driver_nationality": driver["nationality"],
         "car_number": result.get("number", ""),
@@ -224,7 +231,7 @@ def validate(rows: list[dict[str, Any]]) -> dict[str, Any]:
         identity = (row["driver_name"], row["driver_date_of_birth"])
         previous = driver_identity.setdefault(row["driver_id"], identity)
         if previous != identity:
-            errors.append(f'Driver identity changed for {row["driver_id"]}.')
+            errors.append(f"Driver identity changed for {row['driver_id']}.")
 
     for race_id, race_rows in rows_by_race.items():
         driver_ids = [row["driver_id"] for row in race_rows]
@@ -281,19 +288,19 @@ def write_json(path: Path, value: Any) -> None:
         handle.write("\n")
 
 
-def main() -> None:
-    args = parse_args()
-    retrieval_dir = choose_retrieval(args.retrieval)
-    output_dir = args.output_dir or PROCESSED_ROOT / retrieval_dir.name
+def normalize_dataset(
+    retrieval_dir: Path,
+    output_dir: Path,
+    years: tuple[int, ...] = tuple(YEARS),
+) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    rows = []
-    for year in YEARS:
+    rows: list[dict[str, Any]] = []
+    for year in years:
         path = retrieval_dir / str(year) / "race_results.json"
         for race in read_json(path):
             rows.extend(
-                normalize_result(race, result, retrieval_dir.name)
-                for result in race["Results"]
+                normalize_result(race, result, retrieval_dir.name) for result in race["Results"]
             )
 
     assign_normalized_positions(rows)
@@ -305,8 +312,17 @@ def main() -> None:
 
     write_csv(output_dir / "race_results.csv", rows)
     write_json(output_dir / "validation_report.json", report)
-    print(f'Wrote {len(rows)} rows to {output_dir / "race_results.csv"}')
-    print(f'Validation status: {report["status"]}')
+    return report
+
+
+def main() -> None:
+    args = parse_args()
+    retrieval_dir = args.input_dir.resolve() if args.input_dir else choose_retrieval(args.retrieval)
+    output_dir = args.output_dir or PROCESSED_ROOT / retrieval_dir.name
+    years = tuple(int(value.strip()) for value in args.years.split(",") if value.strip())
+    report = normalize_dataset(retrieval_dir, output_dir.resolve(), years)
+    print(f"Wrote {report['row_count']} rows to {output_dir / 'race_results.csv'}")
+    print(f"Validation status: {report['status']}")
 
 
 if __name__ == "__main__":

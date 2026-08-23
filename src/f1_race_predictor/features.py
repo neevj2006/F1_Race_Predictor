@@ -9,13 +9,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from f1_race_predictor.artifacts import portable_path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 PROCESSED_ROOT = PROJECT_ROOT / "data" / "processed" / "fastf1"
 FEATURE_ROOT = PROJECT_ROOT / "data" / "features" / "fastf1"
 
 SEASON_WEIGHTS = {2023: 0.25, 2024: 0.50, 2025: 0.75, 2026: 1.00}
-RECENT_WINDOWS = (5, 10)
+RECENT_WINDOWS: tuple[int, ...] = (5, 10)
 CIRCUIT_PRIOR_STRENGTH = 2.0
 NEUTRAL_PERFORMANCE = 0.5
 NEUTRAL_TEAMMATE_DELTA = 0.0
@@ -77,7 +78,48 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Output directory. Defaults to data/features/fastf1/<retrieval>.",
     )
+    parser.add_argument(
+        "--input-file",
+        type=Path,
+        help="Explicit normalized race-results CSV. Takes precedence over --retrieval.",
+    )
+    parser.add_argument(
+        "--season-weights",
+        default="2023=0.25,2024=0.50,2025=0.75,2026=1.00",
+        help="Comma-separated season=weight values.",
+    )
+    parser.add_argument("--recent-windows", default="5,10")
+    parser.add_argument("--circuit-prior-strength", type=float, default=2.0)
     return parser.parse_args()
+
+
+def parse_season_weights(value: str) -> dict[int, float]:
+    weights = {
+        int(item.split("=", 1)[0].strip()): float(item.split("=", 1)[1].strip())
+        for item in value.split(",")
+        if item.strip()
+    }
+    ordered = [weights[season] for season in sorted(weights)]
+    if any(weight <= 0 for weight in ordered):
+        raise ValueError("Season weights must be positive.")
+    if any(left >= right for left, right in zip(ordered, ordered[1:])):
+        raise ValueError("Season weights must increase toward the most recent season.")
+    return weights
+
+
+def configure_feature_settings(
+    season_weights: dict[int, float],
+    recent_windows: tuple[int, ...],
+    circuit_prior_strength: float,
+) -> None:
+    global SEASON_WEIGHTS, RECENT_WINDOWS, CIRCUIT_PRIOR_STRENGTH
+    if not recent_windows or any(window <= 0 for window in recent_windows):
+        raise ValueError("Recent windows must contain positive integers.")
+    if circuit_prior_strength < 0:
+        raise ValueError("Circuit prior strength cannot be negative.")
+    SEASON_WEIGHTS = season_weights
+    RECENT_WINDOWS = recent_windows
+    CIRCUIT_PRIOR_STRENGTH = circuit_prior_strength
 
 
 def read_json(path: Path) -> Any:
@@ -128,7 +170,9 @@ def load_results(path: Path) -> list[dict[str, Any]]:
             for column in integer_columns:
                 row[column] = int(row[column])
             rows.append(row)
-    return sorted(rows, key=lambda row: (row["race_date"], row["season"], row["round"], row["driver_id"]))
+    return sorted(
+        rows, key=lambda row: (row["race_date"], row["season"], row["round"], row["driver_id"])
+    )
 
 
 def mean_or(values: Iterable[float], fallback: float) -> float:
@@ -404,7 +448,9 @@ def build_features(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 for row in constructor_rows
                 if row["classification_status"] == "CLASSIFIED"
             ]
-            team_finish_score = mean_or(classified_scores, None) if classified_scores else None
+            team_finish_score = (
+                sum(classified_scores) / len(classified_scores) if classified_scores else None
+            )
             team_record = {
                 "season": constructor_rows[0]["season"],
                 "race_id": constructor_rows[0]["race_id"],
@@ -413,9 +459,9 @@ def build_features(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "dnfs": sum(row["classification_status"] == "DNF" for row in constructor_rows),
             }
             constructor_history[constructor_id].append(team_record)
-            constructor_circuit_history[
-                (constructor_id, constructor_rows[0]["circuit_id"])
-            ].append(team_record)
+            constructor_circuit_history[(constructor_id, constructor_rows[0]["circuit_id"])].append(
+                team_record
+            )
             if team_finish_score is not None:
                 global_constructor_scores.append(team_finish_score)
 
@@ -534,16 +580,12 @@ def validate_features(
             continue
         feature_row = rows_by_key[key]
         target_order = race_order[feature_row["race_id"]]
-        prior_rows = [
-            row for row in source_rows if race_order[row["race_id"]] < target_order
-        ]
+        prior_rows = [row for row in source_rows if race_order[row["race_id"]] < target_order]
         prior_driver_rows = [
             row for row in prior_rows if row["driver_id"] == feature_row["driver_id"]
         ]
         prior_constructor_rows = [
-            row
-            for row in prior_rows
-            if row["constructor_id"] == feature_row["constructor_id"]
+            row for row in prior_rows if row["constructor_id"] == feature_row["constructor_id"]
         ]
         examples.append(
             {
@@ -587,11 +629,7 @@ def validate_features(
     }
 
 
-def main() -> None:
-    args = parse_args()
-    dataset_dir = choose_dataset(args.retrieval)
-    source_path = dataset_dir / "race_results.csv"
-    output_dir = args.output_dir or FEATURE_ROOT / dataset_dir.name
+def generate_feature_dataset(source_path: Path, output_dir: Path) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     source_rows = load_results(source_path)
@@ -615,9 +653,9 @@ def main() -> None:
     write_json(
         output_dir / "feature_manifest.json",
         {
-            "source_dataset": f"data/processed/fastf1/{dataset_dir.name}/race_results.csv",
-            "feature_dataset": f"data/features/fastf1/{dataset_dir.name}/pre_weekend_features.csv",
-            "target_dataset": f"data/features/fastf1/{dataset_dir.name}/race_targets.csv",
+            "source_dataset": portable_path(source_path, PROJECT_ROOT),
+            "feature_dataset": portable_path(output_dir / "pre_weekend_features.csv", PROJECT_ROOT),
+            "target_dataset": portable_path(output_dir / "race_targets.csv", PROJECT_ROOT),
             "season_weights": {str(year): weight for year, weight in SEASON_WEIGHTS.items()},
             "recent_windows": list(RECENT_WINDOWS),
             "circuit_prior_strength": CIRCUIT_PRIOR_STRENGTH,
@@ -636,9 +674,31 @@ def main() -> None:
             },
         },
     )
-    print(f'Wrote {len(feature_rows)} feature rows to {output_dir / "pre_weekend_features.csv"}')
-    print(f'Wrote {len(feature_rows)} target rows to {output_dir / "race_targets.csv"}')
-    print(f'Validation status: {report["status"]}')
+    return report
+
+
+def main() -> None:
+    args = parse_args()
+    if args.input_file:
+        source_path = args.input_file.resolve()
+        dataset_name = source_path.parent.name
+    else:
+        dataset_dir = choose_dataset(args.retrieval)
+        source_path = dataset_dir / "race_results.csv"
+        dataset_name = dataset_dir.name
+    output_dir = args.output_dir or FEATURE_ROOT / dataset_name
+    configure_feature_settings(
+        parse_season_weights(args.season_weights),
+        tuple(int(value.strip()) for value in args.recent_windows.split(",") if value.strip()),
+        args.circuit_prior_strength,
+    )
+    report = generate_feature_dataset(source_path, output_dir.resolve())
+    print(
+        f"Wrote {report['feature_row_count']} feature rows to "
+        f"{output_dir / 'pre_weekend_features.csv'}"
+    )
+    print(f"Wrote {report['feature_row_count']} target rows to {output_dir / 'race_targets.csv'}")
+    print(f"Validation status: {report['status']}")
 
 
 if __name__ == "__main__":

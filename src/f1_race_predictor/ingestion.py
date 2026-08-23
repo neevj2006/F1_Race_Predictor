@@ -12,11 +12,10 @@ from pathlib import Path
 from typing import Any
 
 import fastf1
+import fastf1.ergast.interface
 import numpy as np
 import pandas as pd
-import fastf1.ergast.interface
 from fastf1.ergast import Ergast
-
 
 YEARS = (2023, 2024, 2025, 2026)
 
@@ -26,20 +25,25 @@ def to_json_value(value: Any) -> Any:
         return None
     if isinstance(value, (datetime, date, time)):
         return value.isoformat()
-    if isinstance(value, (pd.Timestamp, pd.Timedelta, timedelta)):
+    if isinstance(value, (pd.Timestamp, pd.Timedelta)):
         return value.isoformat()
+    if isinstance(value, timedelta):
+        return str(value)
     if isinstance(value, np.generic):
         value = value.item()
     try:
         if pd.isna(value):
             return None
-    except (TypeError, ValueError):
+    except TypeError, ValueError:
         pass
     return value
 
 
 def save_json(path: Path, value: Any) -> dict[str, Any]:
-    payload = json.dumps(value, indent=2, ensure_ascii=False, default=to_json_value).encode("utf-8") + b"\n"
+    payload = (
+        json.dumps(value, indent=2, ensure_ascii=False, default=to_json_value).encode("utf-8")
+        + b"\n"
+    )
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("xb") as file:
         file.write(payload)
@@ -87,7 +91,9 @@ def race_results(client: Ergast, year: int) -> tuple[list[dict[str, Any]], int]:
     return [races_by_round[key] for key in sorted(races_by_round)], pages
 
 
-def validate(year: int, schedule: list[dict[str, Any]], races: list[dict[str, Any]]) -> dict[str, Any]:
+def validate(
+    year: int, schedule: list[dict[str, Any]], races: list[dict[str, Any]]
+) -> dict[str, Any]:
     errors: list[str] = []
     warnings: list[str] = []
     race_rows = [row for race in races for row in race["Results"]]
@@ -156,9 +162,16 @@ def current_grid(races: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def collect(output_root: Path, cache_dir: Path) -> Path:
+def collect(
+    output_root: Path,
+    cache_dir: Path,
+    years: tuple[int, ...] = YEARS,
+    as_of: datetime | None = None,
+    retrieval_id: str | None = None,
+) -> Path:
     started_at = datetime.now(timezone.utc)
-    retrieval_id = started_at.strftime("%Y%m%dT%H%M%SZ")
+    cutoff = as_of or started_at
+    retrieval_id = retrieval_id or started_at.strftime("%Y%m%dT%H%M%SZ")
     retrieval_dir = output_root / retrieval_id
     retrieval_dir.mkdir(parents=True, exist_ok=False)
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -178,9 +191,14 @@ def collect(output_root: Path, cache_dir: Path) -> Path:
         metadata["path"] = path.relative_to(retrieval_dir).as_posix()
         files.append(metadata)
 
-    for year in YEARS:
+    for year in years:
         schedule = schedule_records(year)
         results, pages = race_results(client, year)
+        results = [
+            race
+            for race in results
+            if datetime.fromisoformat(str(race["date"])).replace(tzinfo=timezone.utc) <= cutoff
+        ]
         results_by_year[year] = results
         result_pages[str(year)] = pages
         year_dir = retrieval_dir / str(year)
@@ -197,12 +215,15 @@ def collect(output_root: Path, cache_dir: Path) -> Path:
         "yearly_validation": validations,
     }
     store(retrieval_dir / "validation_report.json", report)
-    store(retrieval_dir / "current_2026_grid.json", current_grid(results_by_year[2026]))
+    if 2026 in results_by_year and results_by_year[2026]:
+        store(retrieval_dir / "current_2026_grid.json", current_grid(results_by_year[2026]))
 
     manifest = {
         "retrieval_id": retrieval_id,
         "started_at": started_at.isoformat(),
         "completed_at": datetime.now(timezone.utc).isoformat(),
+        "as_of": cutoff.isoformat(),
+        "years": list(years),
         "source": "FastF1",
         "fastf1_version": fastf1.__version__,
         "python_version": platform.python_version(),
@@ -221,7 +242,7 @@ def collect(output_root: Path, cache_dir: Path) -> Path:
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--output-root",
@@ -233,8 +254,31 @@ def main() -> None:
         type=Path,
         default=project_root / "data" / "cache" / "fastf1",
     )
+    parser.add_argument(
+        "--years",
+        default=",".join(str(year) for year in YEARS),
+        help="Comma-separated seasons to collect.",
+    )
+    parser.add_argument(
+        "--as-of",
+        help="UTC ISO timestamp used to exclude later race results. Defaults to the current time.",
+    )
+    parser.add_argument(
+        "--retrieval-id",
+        help="Explicit immutable output identifier. Defaults to the current UTC timestamp.",
+    )
     args = parser.parse_args()
-    print(collect(args.output_root.resolve(), args.cache_dir.resolve()))
+    years = tuple(int(value.strip()) for value in args.years.split(",") if value.strip())
+    as_of = datetime.fromisoformat(args.as_of.replace("Z", "+00:00")) if args.as_of else None
+    print(
+        collect(
+            args.output_root.resolve(),
+            args.cache_dir.resolve(),
+            years=years,
+            as_of=as_of,
+            retrieval_id=args.retrieval_id,
+        )
+    )
 
 
 if __name__ == "__main__":

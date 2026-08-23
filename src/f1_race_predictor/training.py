@@ -17,8 +17,9 @@ from sklearn.linear_model import Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
+from f1_race_predictor.artifacts import portable_path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 FEATURE_ROOT = PROJECT_ROOT / "data" / "features" / "fastf1"
 BASELINE_ROOT = PROJECT_ROOT / "data" / "evaluations" / "baselines"
 MODEL_EVALUATION_ROOT = PROJECT_ROOT / "data" / "evaluations" / "models"
@@ -32,7 +33,7 @@ RANDOM_SEED = 42
 MVP_SPEARMAN_TARGET = 0.60
 GRADIENT_REQUIRED_TEST_WINS = 3
 
-RIDGE_ALPHAS = (0.1, 1.0, 10.0, 100.0)
+RIDGE_ALPHAS: tuple[float, ...] = (0.1, 1.0, 10.0, 100.0)
 HISTORY_SCHEMES = ("unweighted", "season_weighted", "recent_20")
 FEATURE_SETS = ("driver_only", "full")
 
@@ -157,6 +158,24 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Saved model directory. Defaults to models/<retrieval>.",
     )
+    parser.add_argument(
+        "--input-dir",
+        type=Path,
+        help="Explicit feature dataset directory. Takes precedence over --retrieval.",
+    )
+    parser.add_argument(
+        "--baseline-scores",
+        type=Path,
+        help="Explicit baseline race-scores CSV. Defaults to the matching evaluation dataset.",
+    )
+    parser.add_argument("--selection-season", type=int, default=2026)
+    parser.add_argument("--selection-rounds", default="1,2,3,4,5,6")
+    parser.add_argument("--test-rounds", default="7,8,9,10,11")
+    parser.add_argument("--recent-races", type=int, default=20)
+    parser.add_argument("--random-seed", type=int, default=42)
+    parser.add_argument("--mvp-spearman-target", type=float, default=0.60)
+    parser.add_argument("--gradient-required-test-wins", type=int, default=3)
+    parser.add_argument("--ridge-alphas", default="0.1,1.0,10.0,100.0")
     return parser.parse_args()
 
 
@@ -285,8 +304,7 @@ def training_rows_before(
     earlier = [
         row
         for row in rows
-        if row["race_date"] < cutoff_date
-        and row["actual_classification_status"] == "CLASSIFIED"
+        if row["race_date"] < cutoff_date and row["actual_classification_status"] == "CLASSIFIED"
     ]
     if history_scheme != "recent_20":
         return earlier
@@ -306,8 +324,7 @@ def final_training_rows(
     eligible = [
         row
         for row in rows
-        if row["race_date"] <= cutoff_date
-        and row["actual_classification_status"] == "CLASSIFIED"
+        if row["race_date"] <= cutoff_date and row["actual_classification_status"] == "CLASSIFIED"
     ]
     if history_scheme != "recent_20":
         return eligible
@@ -368,9 +385,7 @@ def rank_race(
     columns = config["feature_columns"]
     matrix = np.asarray([[row[column] for column in columns] for row in race_rows], dtype=float)
     scores = estimator.predict(matrix)
-    score_by_driver = {
-        row["driver_id"]: float(score) for row, score in zip(race_rows, scores)
-    }
+    score_by_driver = {row["driver_id"]: float(score) for row, score in zip(race_rows, scores)}
     ordered = sorted(
         race_rows,
         key=lambda row: (-score_by_driver[row["driver_id"]], row["driver_id"]),
@@ -453,15 +468,11 @@ def score_race(predictions: list[dict[str, Any]]) -> dict[str, Any]:
 
 def summarize_race_scores(scores: list[dict[str, Any]]) -> dict[str, float]:
     return {
-        "average_spearman_correlation": mean_or(
-            row["spearman_correlation"] for row in scores
-        ),
+        "average_spearman_correlation": mean_or(row["spearman_correlation"] for row in scores),
         "average_mean_absolute_position_error": mean_or(
             row["mean_absolute_position_error"] for row in scores
         ),
-        "average_kendall_correlation": mean_or(
-            row["kendall_correlation"] for row in scores
-        ),
+        "average_kendall_correlation": mean_or(row["kendall_correlation"] for row in scores),
         "winner_accuracy": mean_or(row["winner_accuracy"] for row in scores),
         "average_top_three_overlap": mean_or(row["top_three_overlap"] for row in scores),
     }
@@ -471,8 +482,7 @@ def selection_race_groups(rows: list[dict[str, Any]]) -> list[list[dict[str, Any
     return [
         group
         for group in race_groups(rows)
-        if group[0]["season"] == SELECTION_SEASON
-        and group[0]["round"] in SELECTION_ROUNDS
+        if group[0]["season"] == SELECTION_SEASON and group[0]["round"] in SELECTION_ROUNDS
     ]
 
 
@@ -579,8 +589,11 @@ def train_frozen_model(
     return estimator, train_rows, predictions, race_scores
 
 
-def baseline_benchmark(retrieval_id: str) -> dict[str, Any]:
-    path = BASELINE_ROOT / retrieval_id / "baseline_race_scores.csv"
+def baseline_benchmark(
+    retrieval_id: str,
+    scores_path: Path | None = None,
+) -> dict[str, Any]:
+    path = scores_path or BASELINE_ROOT / retrieval_id / "baseline_race_scores.csv"
     rows = [
         row
         for row in load_csv(path)
@@ -589,7 +602,7 @@ def baseline_benchmark(retrieval_id: str) -> dict[str, Any]:
     by_baseline: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in rows:
         by_baseline[row["baseline"]].append(row)
-    summaries = []
+    summaries: list[dict[str, Any]] = []
     for baseline, baseline_rows in by_baseline.items():
         summaries.append(
             {
@@ -614,10 +627,14 @@ def model_summary(
 ) -> dict[str, Any]:
     summary = summarize_race_scores(race_scores)
     ridge_by_race = {row["race_id"]: row for row in ridge_scores}
-    races_beating_ridge = sum(
-        row["spearman_correlation"] > ridge_by_race[row["race_id"]]["spearman_correlation"]
-        for row in race_scores
-    ) if config["model_family"] != "ridge" else 0
+    races_beating_ridge = (
+        sum(
+            row["spearman_correlation"] > ridge_by_race[row["race_id"]]["spearman_correlation"]
+            for row in race_scores
+        )
+        if config["model_family"] != "ridge"
+        else 0
+    )
     return {
         "model_id": config["model_id"],
         "model_family": config["model_family"],
@@ -663,7 +680,9 @@ def segment_summary(
         if row["model_id"] != model_id:
             continue
         position = row["actual_position"]
-        field_segment = "front_runner" if position <= 7 else "midfield" if position <= 15 else "backmarker"
+        field_segment = (
+            "front_runner" if position <= 7 else "midfield" if position <= 15 else "backmarker"
+        )
         experience_segment = "rookie" if row["driver_prior_starts"] < 10 else "experienced"
         if row["actual_classification_status"] == "DNF":
             classification_segment = "DNF"
@@ -680,9 +699,7 @@ def segment_summary(
             "segment_type": segment_type,
             "segment": segment,
             "driver_rows": len(rows),
-            "mean_absolute_position_error": mean_or(
-                row["absolute_position_error"] for row in rows
-            ),
+            "mean_absolute_position_error": mean_or(row["absolute_position_error"] for row in rows),
         }
         for (segment_type, segment), rows in sorted(segments.items())
     ]
@@ -699,7 +716,11 @@ def error_analysis(
         key=lambda row: (-row["absolute_position_error"], row["race_id"], row["driver_id"]),
     )[:15]
     dnf_segment = next(
-        (row for row in segments if row["segment_type"] == "classification" and row["segment"] == "DNF"),
+        (
+            row
+            for row in segments
+            if row["segment_type"] == "classification" and row["segment"] == "DNF"
+        ),
         None,
     )
     classified_segment = next(
@@ -810,9 +831,9 @@ def validate_outputs(
     for row in selected_predictions:
         prediction_groups[row["race_id"]].append(row)
 
-    checks["test_rounds_are_exactly_seven_through_eleven"] = (
-        sorted(group[0]["round"] for group in test_groups) == list(TEST_ROUNDS)
-    )
+    checks["test_rounds_are_exactly_seven_through_eleven"] = sorted(
+        group[0]["round"] for group in test_groups
+    ) == list(TEST_ROUNDS)
     checks["training_contains_only_classified_results"] = all(
         row["actual_classification_status"] == "CLASSIFIED" for row in train_rows
     )
@@ -842,9 +863,9 @@ def validate_outputs(
                 selected_config["model_id"],
             )
         )
-    checks["saved_model_reproduces_predictions"] = (
-        prediction_signature(selected_predictions) == prediction_signature(loaded_predictions)
-    )
+    checks["saved_model_reproduces_predictions"] = prediction_signature(
+        selected_predictions
+    ) == prediction_signature(loaded_predictions)
 
     repeated_estimator = fit_estimator(copy.deepcopy(train_rows), selected_config)
     repeated_predictions = []
@@ -857,9 +878,9 @@ def validate_outputs(
                 selected_config["model_id"],
             )
         )
-    checks["fixed_seed_reproduces_predictions"] = (
-        prediction_signature(selected_predictions) == prediction_signature(repeated_predictions)
-    )
+    checks["fixed_seed_reproduces_predictions"] = prediction_signature(
+        selected_predictions
+    ) == prediction_signature(repeated_predictions)
     checks["performance_gate_passed"] = performance_gate_passed
 
     for name, passed in checks.items():
@@ -879,8 +900,30 @@ def validate_outputs(
 
 
 def main() -> None:
+    global SELECTION_SEASON, SELECTION_ROUNDS, TEST_ROUNDS, RECENT_RACE_COUNT
+    global RANDOM_SEED, MVP_SPEARMAN_TARGET, GRADIENT_REQUIRED_TEST_WINS, RIDGE_ALPHAS
     args = parse_args()
-    dataset_dir = choose_feature_dataset(args.retrieval)
+    SELECTION_SEASON = args.selection_season
+    SELECTION_ROUNDS = tuple(
+        int(value.strip()) for value in args.selection_rounds.split(",") if value.strip()
+    )
+    TEST_ROUNDS = tuple(
+        int(value.strip()) for value in args.test_rounds.split(",") if value.strip()
+    )
+    RECENT_RACE_COUNT = args.recent_races
+    RANDOM_SEED = args.random_seed
+    MVP_SPEARMAN_TARGET = args.mvp_spearman_target
+    GRADIENT_REQUIRED_TEST_WINS = args.gradient_required_test_wins
+    RIDGE_ALPHAS = tuple(
+        float(value.strip()) for value in args.ridge_alphas.split(",") if value.strip()
+    )
+    if set(SELECTION_ROUNDS) & set(TEST_ROUNDS):
+        raise ValueError("Selection and test rounds must not overlap.")
+    if not SELECTION_ROUNDS or not TEST_ROUNDS:
+        raise ValueError("Selection and test rounds cannot be empty.")
+    dataset_dir = (
+        args.input_dir.resolve() if args.input_dir else choose_feature_dataset(args.retrieval)
+    )
     output_dir = args.output_dir or MODEL_EVALUATION_ROOT / dataset_dir.name
     model_dir = args.model_dir or MODEL_ROOT / dataset_dir.name
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -936,17 +979,27 @@ def main() -> None:
         best_gradient_config,
         gradient_scores,
     )
-    selected_config = next(config for config in compared_configs if config["model_id"] == selected_model_id)
+    selected_config = next(
+        config for config in compared_configs if config["model_id"] == selected_model_id
+    )
     selected_estimator = compared_estimators[selected_model_id]
     selected_train_rows = compared_train_rows[selected_model_id]
     selected_predictions = [row for row in all_predictions if row["model_id"] == selected_model_id]
     selected_race_scores = [row for row in all_race_scores if row["model_id"] == selected_model_id]
 
     summaries = [
-        model_summary(config, [row for row in all_race_scores if row["model_id"] == config["model_id"]], ridge_scores, selected_model_id)
+        model_summary(
+            config,
+            [row for row in all_race_scores if row["model_id"] == config["model_id"]],
+            ridge_scores,
+            selected_model_id,
+        )
         for config in compared_configs
     ]
-    baseline = baseline_benchmark(dataset_dir.name)
+    baseline = baseline_benchmark(
+        dataset_dir.name,
+        args.baseline_scores.resolve() if args.baseline_scores else None,
+    )
     selected_summary = next(row for row in summaries if row["selected_model"])
     performance_gate_passed = (
         selected_summary["average_spearman_correlation"] >= MVP_SPEARMAN_TARGET
@@ -999,10 +1052,10 @@ def main() -> None:
             "training_cutoff_date": selection_race_groups(rows)[-1][0]["race_date"],
             "training_rows": len(selected_train_rows),
             "test_rounds": list(TEST_ROUNDS),
-            "feature_dataset": (
-                f"data/features/fastf1/{dataset_dir.name}/pre_weekend_features.csv"
+            "feature_dataset": portable_path(
+                dataset_dir / "pre_weekend_features.csv", PROJECT_ROOT
             ),
-            "target_dataset": f"data/features/fastf1/{dataset_dir.name}/race_targets.csv",
+            "target_dataset": portable_path(dataset_dir / "race_targets.csv", PROJECT_ROOT),
             "baseline_benchmark": baseline,
             "evaluation": selected_summary,
             "performance_gate": {
@@ -1036,10 +1089,7 @@ def main() -> None:
     if report["status"] != "passed":
         raise ValueError("Model evaluation did not pass all required checks.")
     print(f"Selected model: {selected_model_id}")
-    print(
-        "Average Spearman correlation: "
-        f"{selected_summary['average_spearman_correlation']:.3f}"
-    )
+    print(f"Average Spearman correlation: {selected_summary['average_spearman_correlation']:.3f}")
     print(
         "Strongest matching baseline: "
         f"{baseline['baseline']} ({baseline['average_spearman_correlation']:.3f})"

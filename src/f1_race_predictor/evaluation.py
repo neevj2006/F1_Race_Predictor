@@ -4,14 +4,14 @@ import argparse
 import copy
 import csv
 import json
-import math
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+from f1_race_predictor.artifacts import portable_path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 FEATURE_ROOT = PROJECT_ROOT / "data" / "features" / "fastf1"
 EVALUATION_ROOT = PROJECT_ROOT / "data" / "evaluations" / "baselines"
 
@@ -91,7 +91,24 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Output directory. Defaults to data/evaluations/baselines/<retrieval>.",
     )
+    parser.add_argument(
+        "--input-dir",
+        type=Path,
+        help="Explicit feature dataset directory. Takes precedence over --retrieval.",
+    )
+    parser.add_argument("--held-out-season", type=int, default=2026)
+    parser.add_argument(
+        "--season-weights",
+        default="2023=0.25,2024=0.50,2025=0.75,2026=1.00",
+        help="Comma-separated season=weight values.",
+    )
     return parser.parse_args()
+
+
+def configure_evaluation(held_out_season: int, season_weights: dict[int, float]) -> None:
+    global HELD_OUT_SEASON, SEASON_WEIGHTS
+    HELD_OUT_SEASON = held_out_season
+    SEASON_WEIGHTS = season_weights
 
 
 def read_json(path: Path) -> Any:
@@ -245,10 +262,9 @@ def baseline_scores_for_driver(
         "driver_form_recent_10": driver_scores["recent_10"],
     }
     for version in ("unweighted", "season_weighted", "recent_5", "recent_10"):
-        scores[f"constructor_teammate_{version}"] = (
-            CONSTRUCTOR_SHARE * constructor_scores[version]
-            + DRIVER_SHARE * scaled_teammate_score(teammate_scores[version])
-        )
+        scores[f"constructor_teammate_{version}"] = CONSTRUCTOR_SHARE * constructor_scores[
+            version
+        ] + DRIVER_SHARE * scaled_teammate_score(teammate_scores[version])
     return scores
 
 
@@ -402,9 +418,7 @@ def score_predictions(predictions: list[dict[str, Any]]) -> list[dict[str, Any]]
         actual = [row["actual_position"] for row in ordered]
         predicted_winner = min(group, key=lambda row: row["predicted_position"])["driver_id"]
         actual_winner = min(group, key=lambda row: row["actual_position"])["driver_id"]
-        predicted_top_three = {
-            row["driver_id"] for row in group if row["predicted_position"] <= 3
-        }
+        predicted_top_three = {row["driver_id"] for row in group if row["predicted_position"] <= 3}
         actual_top_three = {row["driver_id"] for row in group if row["actual_position"] <= 3}
         scores.append(
             {
@@ -497,11 +511,11 @@ def validate_evaluation(
     for row in predictions:
         prediction_groups[(row["baseline"], row["race_id"])].append(row)
 
-    checks["every_baseline_scores_every_held_out_race"] = (
-        len(race_scores) == len(BASELINES) * len(held_out_groups)
-        and {(row["baseline"], row["race_id"]) for row in race_scores}
-        == {(baseline, race_id) for baseline in BASELINES for race_id in held_out_race_ids}
-    )
+    checks["every_baseline_scores_every_held_out_race"] = len(race_scores) == len(BASELINES) * len(
+        held_out_groups
+    ) and {(row["baseline"], row["race_id"]) for row in race_scores} == {
+        (baseline, race_id) for baseline in BASELINES for race_id in held_out_race_ids
+    }
     checks["every_prediction_contains_the_complete_field"] = all(
         len(prediction_groups[(baseline, group[0]["race_id"])]) == len(group)
         for baseline in BASELINES
@@ -526,20 +540,17 @@ def validate_evaluation(
         and 0.0 <= row["top_three_overlap"] <= 1.0
         for row in race_scores
     )
-    checks["one_summary_per_baseline"] = (
-        len(summaries) == len(BASELINES)
-        and {row["baseline"] for row in summaries} == set(BASELINES)
-    )
+    checks["one_summary_per_baseline"] = len(summaries) == len(BASELINES) and {
+        row["baseline"] for row in summaries
+    } == set(BASELINES)
 
     repeated_predictions = generate_predictions(copy.deepcopy(source_rows))
-    checks["repeated_evaluation_is_identical"] = (
-        prediction_signature(predictions) == prediction_signature(repeated_predictions)
-    )
+    checks["repeated_evaluation_is_identical"] = prediction_signature(
+        predictions
+    ) == prediction_signature(repeated_predictions)
 
     cutoff_index = max(1, len(held_out_groups) // 2)
-    earlier_held_out_ids = {
-        group[0]["race_id"] for group in held_out_groups[: cutoff_index + 1]
-    }
+    earlier_held_out_ids = {group[0]["race_id"] for group in held_out_groups[: cutoff_index + 1]}
     last_earlier_race = held_out_groups[cutoff_index][0]["race_id"]
     all_groups = race_groups(source_rows)
     truncated_source = [
@@ -549,10 +560,9 @@ def validate_evaluation(
         if group[0]["race_date"] <= held_out_groups[cutoff_index][0]["race_date"]
     ]
     truncated_predictions = generate_predictions(copy.deepcopy(truncated_source))
-    checks["truncating_future_races_keeps_earlier_predictions"] = (
-        prediction_signature(predictions, earlier_held_out_ids)
-        == prediction_signature(truncated_predictions, earlier_held_out_ids)
-    )
+    checks["truncating_future_races_keeps_earlier_predictions"] = prediction_signature(
+        predictions, earlier_held_out_ids
+    ) == prediction_signature(truncated_predictions, earlier_held_out_ids)
 
     changed_source = copy.deepcopy(source_rows)
     for row in changed_source:
@@ -560,10 +570,9 @@ def validate_evaluation(
             row["actual_position"] = 1
             row["actual_classification_status"] = "DNF"
     changed_predictions = generate_predictions(changed_source)
-    checks["current_race_result_does_not_change_its_prediction"] = (
-        prediction_signature(predictions, {last_earlier_race})
-        == prediction_signature(changed_predictions, {last_earlier_race})
-    )
+    checks["current_race_result_does_not_change_its_prediction"] = prediction_signature(
+        predictions, {last_earlier_race}
+    ) == prediction_signature(changed_predictions, {last_earlier_race})
 
     for name, passed in checks.items():
         if not passed:
@@ -591,10 +600,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]], columns: list[str]) -> Non
         writer.writerows(rows)
 
 
-def main() -> None:
-    args = parse_args()
-    dataset_dir = choose_feature_dataset(args.retrieval)
-    output_dir = args.output_dir or EVALUATION_ROOT / dataset_dir.name
+def evaluate_dataset(dataset_dir: Path, output_dir: Path) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     source_rows = load_rows(dataset_dir)
@@ -613,8 +619,10 @@ def main() -> None:
     write_json(
         output_dir / "evaluation_manifest.json",
         {
-            "feature_dataset": f"data/features/fastf1/{dataset_dir.name}/pre_weekend_features.csv",
-            "target_dataset": f"data/features/fastf1/{dataset_dir.name}/race_targets.csv",
+            "feature_dataset": portable_path(
+                dataset_dir / "pre_weekend_features.csv", PROJECT_ROOT
+            ),
+            "target_dataset": portable_path(dataset_dir / "race_targets.csv", PROJECT_ROOT),
             "held_out_season": HELD_OUT_SEASON,
             "history_start_season": 2023,
             "baselines": {
@@ -655,6 +663,22 @@ def main() -> None:
             ],
         },
     )
+    return report
+
+
+def main() -> None:
+    args = parse_args()
+    dataset_dir = (
+        args.input_dir.resolve() if args.input_dir else choose_feature_dataset(args.retrieval)
+    )
+    output_dir = args.output_dir or EVALUATION_ROOT / dataset_dir.name
+    weights = {
+        int(item.split("=", 1)[0].strip()): float(item.split("=", 1)[1].strip())
+        for item in args.season_weights.split(",")
+        if item.strip()
+    }
+    configure_evaluation(args.held_out_season, weights)
+    report = evaluate_dataset(dataset_dir, output_dir.resolve())
     print(f"Evaluated {len(BASELINES)} baselines over {report['held_out_races']} races.")
     print(f"Strongest baseline: {report['strongest_baseline']['baseline']}")
     print(

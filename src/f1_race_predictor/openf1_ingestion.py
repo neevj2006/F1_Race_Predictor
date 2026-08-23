@@ -13,7 +13,6 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-
 API_ROOT = "https://api.openf1.org/v1"
 YEARS = (2023, 2024, 2025, 2026)
 
@@ -25,7 +24,9 @@ class OpenF1Client:
     def __init__(self) -> None:
         self._last_request_started = 0.0
 
-    def get(self, endpoint: str, params: list[tuple[str, str | int]]) -> tuple[bytes, Any, dict[str, Any]]:
+    def get(
+        self, endpoint: str, params: list[tuple[str, str | int]]
+    ) -> tuple[bytes, Any, dict[str, Any]]:
         query = urlencode(params)
         url = f"{API_ROOT}/{endpoint}?{query}"
 
@@ -36,7 +37,7 @@ class OpenF1Client:
 
             self._last_request_started = time.monotonic()
             retrieved_at = datetime.now(timezone.utc).isoformat()
-            request = Request(url, headers={"User-Agent": "f1-weekend-predictor/data-ingestion"})
+            request = Request(url, headers={"User-Agent": "F1RacePredictor/data-ingestion"})
 
             try:
                 with urlopen(request, timeout=45) as response:
@@ -52,7 +53,9 @@ class OpenF1Client:
                     }
                     return payload, parsed, metadata
             except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
-                retryable = not isinstance(error, HTTPError) or error.code == 429 or error.code >= 500
+                retryable = (
+                    not isinstance(error, HTTPError) or error.code == 429 or error.code >= 500
+                )
                 if attempt == MAX_ATTEMPTS or not retryable:
                     raise RuntimeError(f"OpenF1 request failed: {url}") from error
                 time.sleep(2**attempt)
@@ -207,7 +210,9 @@ def download(output_root: Path) -> Path:
 
         if year == 2026 and completed_keys:
             session_by_key = {session["session_key"]: session for session in candidate_sessions}
-            latest_key = max(completed_keys, key=lambda key: parse_timestamp(session_by_key[key]["date_end"]))
+            latest_key = max(
+                completed_keys, key=lambda key: parse_timestamp(session_by_key[key]["date_end"])
+            )
             latest_2026_session = session_by_key[latest_key]
             latest_2026_drivers = sorted(
                 [row for row in drivers if row["session_key"] == latest_key],
@@ -250,7 +255,7 @@ def download(output_root: Path) -> Path:
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--output-root",
