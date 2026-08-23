@@ -1,0 +1,197 @@
+{
+  "record_type": "historical_backtest",
+  "created_at": "2026-08-23T12:35:00+00:00",
+  "data_cutoff": "2026-07-25T23:59:59+00:00",
+  "race": {
+    "race_id": "2026-11",
+    "season": 2026,
+    "round": 11,
+    "race_date": "2026-07-26",
+    "circuit_id": "hungaroring"
+  },
+  "model_version": "ridge-full-unweighted-a100-20260810t200317z",
+  "model_id": "ridge_full_unweighted_alpha_100",
+  "feature_dataset": {
+    "path": "data/features/fastf1/20260810T200317Z/pre_weekend_features.csv",
+    "sha256": "5067398200eb7c1aa7f4d1738532cf19511c2e98ae77756b146ab54556a4d631"
+  },
+  "drivers": [
+    {
+      "position": 1,
+      "driver_id": "hamilton",
+      "driver_name": "Lewis Hamilton",
+      "constructor_id": "ferrari",
+      "constructor_name": "Ferrari",
+      "model_score": 0.8668571698092864
+    },
+    {
+      "position": 2,
+      "driver_id": "russell",
+      "driver_name": "George Russell",
+      "constructor_id": "mercedes",
+      "constructor_name": "Mercedes",
+      "model_score": 0.837749894575385
+    },
+    {
+      "position": 3,
+      "driver_id": "norris",
+      "driver_name": "Lando Norris",
+      "constructor_id": "mclaren",
+      "constructor_name": "McLaren",
+      "model_score": 0.8044237313161684
+    },
+    {
+      "position": 4,
+      "driver_id": "leclerc",
+      "driver_name": "Charles Leclerc",
+      "constructor_id": "ferrari",
+      "constructor_name": "Ferrari",
+      "model_score": 0.7961034473209139
+    },
+    {
+      "position": 5,
+      "driver_id": "antonelli",
+      "driver_name": "Andrea Kimi Antonelli",
+      "constructor_id": "mercedes",
+      "constructor_name": "Mercedes",
+      "model_score": 0.7759822350556479
+    },
+    {
+      "position": 6,
+      "driver_id": "piastri",
+      "driver_name": "Oscar Piastri",
+      "constructor_id": "mclaren",
+      "constructor_name": "McLaren",
+      "model_score": 0.7675514744463545
+    },
+    {
+      "position": 7,
+      "driver_id": "max_verstappen",
+      "driver_name": "Max Verstappen",
+      "constructor_id": "red_bull",
+      "constructor_name": "Red Bull",
+      "model_score": 0.764259678837
+    },
+    {
+      "position": 8,
+      "driver_id": "hadjar",
+      "driver_name": "Isack Hadjar",
+      "constructor_id": "red_bull",
+      "constructor_name": "Red Bull",
+      "model_score": 0.712633939155403
+    },
+    {
+      "position": 9,
+      "driver_id": "lawson",
+      "driver_name": "Liam Lawson",
+      "constructor_id": "rb",
+      "constructor_name": "RB F1 Team",
+      "model_score": 0.6579389134556977
+    },
+    {
+      "position": 10,
+      "driver_id": "arvid_lindblad",
+      "driver_name": "Arvid Lindblad",
+      "constructor_id": "rb",
+      "constructor_name": "RB F1 Team",
+      "model_score": 0.6321563193323186
+    },
+    {
+      "position": 11,
+      "driver_id": "gasly",
+      "driver_name": "Pierre Gasly",
+      "constructor_id": "alpine",
+      "constructor_name": "Alpine F1 Team",
+      "model_score": 0.6263987009123061
+    },
+    {
+      "position": 12,
+      "driver_id": "colapinto",
+      "driver_name": "Franco Colapinto",
+      "constructor_id": "alpine",
+      "constructor_name": "Alpine F1 Team",
+      "model_score": 0.5575786498088681
+    },
+    {
+      "position": 13,
+      "driver_id": "bortoleto",
+      "driver_name": "Gabriel Bortoleto",
+      "constructor_id": "audi",
+      "constructor_name": "Audi",
+      "model_score": 0.5246182244935929
+    },
+    {
+      "position": 14,
+      "driver_id": "bearman",
+      "driver_name": "Oliver Bearman",
+      "constructor_id": "haas",
+      "constructor_name": "Haas F1 Team",
+      "model_score": 0.49109747339456655
+    },
+    {
+      "position": 15,
+      "driver_id": "hulkenberg",
+      "driver_name": "Nico Hülkenberg",
+      "constructor_id": "audi",
+      "constructor_name": "Audi",
+      "model_score": 0.48879854103322984
+    },
+    {
+      "position": 16,
+      "driver_id": "ocon",
+      "driver_name": "Esteban Ocon",
+      "constructor_id": "haas",
+      "constructor_name": "Haas F1 Team",
+      "model_score": 0.44510682203227264
+    },
+    {
+      "position": 17,
+      "driver_id": "sainz",
+      "driver_name": "Carlos Sainz",
+      "constructor_id": "williams",
+      "constructor_name": "Williams",
+      "model_score": 0.41382327077450765
+    },
+    {
+      "position": 18,
+      "driver_id": "albon",
+      "driver_name": "Alexander Albon",
+      "constructor_id": "williams",
+      "constructor_name": "Williams",
+      "model_score": 0.4026391227798831
+    },
+    {
+      "position": 19,
+      "driver_id": "alonso",
+      "driver_name": "Fernando Alonso",
+      "constructor_id": "aston_martin",
+      "constructor_name": "Aston Martin",
+      "model_score": 0.30773448211223114
+    },
+    {
+      "position": 20,
+      "driver_id": "perez",
+      "driver_name": "Sergio Pérez",
+      "constructor_id": "cadillac",
+      "constructor_name": "Cadillac F1 Team",
+      "model_score": 0.2549265660200313
+    },
+    {
+      "position": 21,
+      "driver_id": "stroll",
+      "driver_name": "Lance Stroll",
+      "constructor_id": "aston_martin",
+      "constructor_name": "Aston Martin",
+      "model_score": 0.23867484789333204
+    },
+    {
+      "position": 22,
+      "driver_id": "bottas",
+      "driver_name": "Valtteri Bottas",
+      "constructor_id": "cadillac",
+      "constructor_name": "Cadillac F1 Team",
+      "model_score": 0.23654044651399092
+    }
+  ],
+  "prediction_id": "historical-2026-11-ridge-a100-v1"
+}

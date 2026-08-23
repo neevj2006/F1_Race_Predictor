@@ -1,0 +1,14 @@
+{
+  "prediction_id": "historical-2026-11-ridge-a100-v1",
+  "archived_at": "2026-08-23T12:36:00+00:00",
+  "record_type": "historical_backtest",
+  "original_prediction": {
+    "path": "prediction.json",
+    "sha256": "2c68420bc21653e7b9aa895707717a35ff02235e72e1d7f59d24dafc3842fec9"
+  },
+  "model_registry": {
+    "model_version": "ridge-full-unweighted-a100-20260810t200317z",
+    "sha256": "a10fba1b5b1ca5fee72a127a5dd06bc59889148eb3c4eb3b27d9be00be5ac061"
+  },
+  "evaluation_is_stored_separately": true
+}

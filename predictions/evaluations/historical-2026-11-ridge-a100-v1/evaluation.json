@@ -1,0 +1,170 @@
+{
+  "prediction_id": "historical-2026-11-ridge-a100-v1",
+  "evaluated_at": "2026-08-23T12:37:00+00:00",
+  "results_dataset": {
+    "path": "data/features/fastf1/20260810T200317Z/race_targets.csv",
+    "sha256": "b146f8267e889b023a11c3ffd28f7419dd8bbc8a734c2dfd16585b5a7793e54a"
+  },
+  "metrics": {
+    "spearman_correlation": 0.7504234895539243,
+    "mean_absolute_position_error": 3.090909090909091,
+    "winner_correct": false,
+    "top_three_overlap": 0.3333333333333333
+  },
+  "official_result": [
+    {
+      "driver_id": "norris",
+      "predicted_position": 3,
+      "actual_position": 1,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 2
+    },
+    {
+      "driver_id": "max_verstappen",
+      "predicted_position": 7,
+      "actual_position": 2,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 5
+    },
+    {
+      "driver_id": "antonelli",
+      "predicted_position": 5,
+      "actual_position": 3,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 2
+    },
+    {
+      "driver_id": "leclerc",
+      "predicted_position": 4,
+      "actual_position": 4,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 0
+    },
+    {
+      "driver_id": "hamilton",
+      "predicted_position": 1,
+      "actual_position": 5,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 4
+    },
+    {
+      "driver_id": "hadjar",
+      "predicted_position": 8,
+      "actual_position": 6,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 2
+    },
+    {
+      "driver_id": "russell",
+      "predicted_position": 2,
+      "actual_position": 7,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 5
+    },
+    {
+      "driver_id": "lawson",
+      "predicted_position": 9,
+      "actual_position": 8,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 1
+    },
+    {
+      "driver_id": "hulkenberg",
+      "predicted_position": 15,
+      "actual_position": 9,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 6
+    },
+    {
+      "driver_id": "arvid_lindblad",
+      "predicted_position": 10,
+      "actual_position": 10,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 0
+    },
+    {
+      "driver_id": "bortoleto",
+      "predicted_position": 13,
+      "actual_position": 11,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 2
+    },
+    {
+      "driver_id": "gasly",
+      "predicted_position": 11,
+      "actual_position": 12,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 1
+    },
+    {
+      "driver_id": "stroll",
+      "predicted_position": 21,
+      "actual_position": 13,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 8
+    },
+    {
+      "driver_id": "alonso",
+      "predicted_position": 19,
+      "actual_position": 14,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 5
+    },
+    {
+      "driver_id": "colapinto",
+      "predicted_position": 12,
+      "actual_position": 15,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 3
+    },
+    {
+      "driver_id": "ocon",
+      "predicted_position": 16,
+      "actual_position": 16,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 0
+    },
+    {
+      "driver_id": "albon",
+      "predicted_position": 18,
+      "actual_position": 17,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 1
+    },
+    {
+      "driver_id": "sainz",
+      "predicted_position": 17,
+      "actual_position": 18,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 1
+    },
+    {
+      "driver_id": "bearman",
+      "predicted_position": 14,
+      "actual_position": 19,
+      "classification_status": "CLASSIFIED",
+      "absolute_position_error": 5
+    },
+    {
+      "driver_id": "piastri",
+      "predicted_position": 6,
+      "actual_position": 20,
+      "classification_status": "DNF",
+      "absolute_position_error": 14
+    },
+    {
+      "driver_id": "perez",
+      "predicted_position": 20,
+      "actual_position": 21,
+      "classification_status": "DNF",
+      "absolute_position_error": 1
+    },
+    {
+      "driver_id": "bottas",
+      "predicted_position": 22,
+      "actual_position": 22,
+      "classification_status": "DNF",
+      "absolute_position_error": 0
+    }
+  ]
+}

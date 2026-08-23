@@ -1,0 +1,197 @@
+{
+  "model_version": "ridge-full-unweighted-a100-20260810t200317z",
+  "registered_at": "2026-08-23T12:30:00+00:00",
+  "model_id": "ridge_full_unweighted_alpha_100",
+  "model_family": "ridge",
+  "feature_set": "full",
+  "history_scheme": "unweighted",
+  "feature_columns": [
+    "driver_prior_starts",
+    "driver_prior_seasons",
+    "driver_prior_classified_finishes",
+    "driver_recent_finish_score_5",
+    "driver_recent_finish_score_10",
+    "driver_circuit_prior_starts",
+    "driver_circuit_classified_finishes",
+    "driver_recent_teammate_delta_5",
+    "driver_recent_teammate_delta_10",
+    "constructor_prior_races",
+    "constructor_recent_finish_score_5",
+    "constructor_recent_finish_score_10",
+    "constructor_recent_dnf_rate_10",
+    "constructor_circuit_prior_races"
+  ],
+  "parameters": {
+    "alpha": 100.0
+  },
+  "random_seed": 42,
+  "season_weights": {
+    "2023": 0.25,
+    "2024": 0.5,
+    "2025": 0.75,
+    "2026": 1.0
+  },
+  "training_result_filter": "CLASSIFIED",
+  "training_races": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2023-13",
+    "2023-14",
+    "2023-15",
+    "2023-16",
+    "2023-17",
+    "2023-18",
+    "2023-19",
+    "2023-20",
+    "2023-21",
+    "2023-22",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2024-13",
+    "2024-14",
+    "2024-15",
+    "2024-16",
+    "2024-17",
+    "2024-18",
+    "2024-19",
+    "2024-20",
+    "2024-21",
+    "2024-22",
+    "2024-23",
+    "2024-24",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2025-13",
+    "2025-14",
+    "2025-15",
+    "2025-16",
+    "2025-17",
+    "2025-18",
+    "2025-19",
+    "2025-20",
+    "2025-21",
+    "2025-22",
+    "2025-23",
+    "2025-24",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "training_cutoff": {
+    "season": 2026,
+    "round": 6,
+    "date": "2026-06-07"
+  },
+  "evaluation": {
+    "model_id": "ridge_full_unweighted_alpha_100",
+    "model_family": "ridge",
+    "feature_set": "full",
+    "history_scheme": "unweighted",
+    "test_races": 5,
+    "average_spearman_correlation": 0.7066064370412196,
+    "average_mean_absolute_position_error": 3.2727272727272725,
+    "average_kendall_correlation": 0.5792207792207792,
+    "winner_accuracy": 0.0,
+    "average_top_three_overlap": 0.3333333333333333,
+    "races_beating_ridge": 0,
+    "selected_model": true
+  },
+  "evaluation_settings": {
+    "selection_rounds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "test_rounds": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "model_frozen_after_round": 6,
+    "classified_results_only_for_training": true,
+    "recent_history_races": 20,
+    "ridge_alphas": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "gradient_boosting_evaluated": true,
+    "gradient_selection_rule": "Higher average test Spearman than Ridge and better race-level Spearman in at least 3 of 5 races.",
+    "baseline_benchmark": {
+      "baseline": "driver_form_recent_5",
+      "average_spearman_correlation": 0.7014116318464144,
+      "races": 5
+    },
+    "selected_model": "ridge_full_unweighted_alpha_100",
+    "performance_gate_passed": true
+  },
+  "artifacts": {
+    "model": {
+      "path": "model.joblib",
+      "sha256": "820fd4a5d2406c3ebcec80344f6739455464f13de2247bd16baba3368c682969"
+    },
+    "source_model_metadata": {
+      "path": "models/20260810T200317Z/model_metadata.json",
+      "sha256": "8dc6eccdf58456b4df65196b8777ad6e6f647ad0e13c556a7efe53bdd7fa178d"
+    },
+    "feature_dataset": {
+      "path": "data/features/fastf1/20260810T200317Z/pre_weekend_features.csv",
+      "sha256": "5067398200eb7c1aa7f4d1738532cf19511c2e98ae77756b146ab54556a4d631"
+    },
+    "target_dataset": {
+      "path": "data/features/fastf1/20260810T200317Z/race_targets.csv",
+      "sha256": "b146f8267e889b023a11c3ffd28f7419dd8bbc8a734c2dfd16585b5a7793e54a"
+    },
+    "feature_manifest": {
+      "path": "data/features/fastf1/20260810T200317Z/feature_manifest.json",
+      "sha256": "1d8379619768d1cb6bf687ba4ec7ce60935f4f5ca43b91a8fa332fb637f5e7b1"
+    },
+    "evaluation_manifest": {
+      "path": "data/evaluations/models/20260810T200317Z/evaluation_manifest.json",
+      "sha256": "503eeea5935d25e31d9cf99e2d4e675e5025c24f10445acc9604dc7cef588d3e"
+    },
+    "evaluation_summary": {
+      "path": "data/evaluations/models/20260810T200317Z/model_summary.csv",
+      "sha256": "0a400eb7d968888961c06e044a09ce55b6069c31d8b1b0216ada059368887fa1"
+    }
+  }
+}
