@@ -1,0 +1,35 @@
+{
+  "feature_dataset": "data/features/fastf1/20260810T200317Z/pre_weekend_features.csv",
+  "target_dataset": "data/features/fastf1/20260810T200317Z/race_targets.csv",
+  "held_out_season": 2026,
+  "history_start_season": 2023,
+  "baselines": {
+    "previous_race_order": "The driver's literal result from their previous appearance, including exceptional results.",
+    "driver_form_unweighted": "Mean of all earlier classified finishing scores.",
+    "driver_form_season_weighted": "Mean of all earlier classified finishing scores using the configured season weights.",
+    "driver_form_recent_5": "Mean of the five most recent classified finishing scores.",
+    "driver_form_recent_10": "Mean of the ten most recent classified finishing scores.",
+    "constructor_teammate_unweighted": "70% constructor form and 30% teammate-adjusted driver form using all earlier races.",
+    "constructor_teammate_season_weighted": "70% constructor form and 30% teammate-adjusted driver form using season weights.",
+    "constructor_teammate_recent_5": "70% constructor form and 30% teammate-adjusted driver form from five recent values.",
+    "constructor_teammate_recent_10": "70% constructor form and 30% teammate-adjusted driver form from ten recent values."
+  },
+  "season_weights": {
+    "2023": 0.25,
+    "2024": 0.5,
+    "2025": 0.75,
+    "2026": 1.0
+  },
+  "constructor_share": 0.7,
+  "driver_share": 0.3,
+  "tie_breaker": "driver_id ascending",
+  "rookie_driver_fallback": 0.5,
+  "new_constructor_fallback": "Mean constructor score from earlier races, or 0.5.",
+  "primary_metric": "Average Spearman rank correlation across held-out races.",
+  "other_metrics": [
+    "Mean absolute position error",
+    "Kendall rank correlation",
+    "Winner accuracy",
+    "Top-three overlap"
+  ]
+}

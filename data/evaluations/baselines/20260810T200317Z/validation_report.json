@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checked_at": "2026-08-23T11:35:41.173878+00:00",
+  "held_out_season": 2026,
+  "held_out_races": 11,
+  "baseline_count": 9,
+  "prediction_row_count": 2178,
+  "race_score_count": 99,
+  "strongest_baseline": {
+    "baseline": "constructor_teammate_recent_5",
+    "held_out_season": 2026,
+    "races": 11,
+    "average_spearman_correlation": 0.540885991478877,
+    "average_mean_absolute_position_error": 4.363636363636363,
+    "average_kendall_correlation": 0.4309327036599763,
+    "winner_accuracy": 0.0,
+    "average_top_three_overlap": 0.36363636363636365
+  },
+  "checks": {
+    "every_baseline_scores_every_held_out_race": true,
+    "every_prediction_contains_the_complete_field": true,
+    "predicted_positions_are_complete_and_unique": true,
+    "actual_positions_are_complete_and_unique": true,
+    "history_cutoff_precedes_each_prediction": true,
+    "metrics_are_in_valid_ranges": true,
+    "one_summary_per_baseline": true,
+    "repeated_evaluation_is_identical": true,
+    "truncating_future_races_keeps_earlier_predictions": true,
+    "current_race_result_does_not_change_its_prediction": true
+  },
+  "errors": []
+}
