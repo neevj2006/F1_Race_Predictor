@@ -1,0 +1,62 @@
+{
+  "source_dataset": "data/processed/fastf1/20260810T200317Z/race_results.csv",
+  "feature_dataset": "data/features/fastf1/20260810T200317Z/pre_weekend_features.csv",
+  "target_dataset": "data/features/fastf1/20260810T200317Z/race_targets.csv",
+  "season_weights": {
+    "2023": 0.25,
+    "2024": 0.5,
+    "2025": 0.75,
+    "2026": 1.0
+  },
+  "recent_windows": [
+    5,
+    10
+  ],
+  "circuit_prior_strength": 2.0,
+  "identifier_columns": [
+    "race_id",
+    "season",
+    "round",
+    "race_date",
+    "circuit_id",
+    "driver_id",
+    "driver_name",
+    "constructor_id",
+    "constructor_name"
+  ],
+  "feature_columns": [
+    "driver_prior_starts",
+    "driver_prior_seasons",
+    "driver_prior_classified_finishes",
+    "driver_recent_finish_score_5",
+    "driver_recent_finish_score_10",
+    "driver_weighted_finish_score",
+    "driver_recent_teammate_delta_5",
+    "driver_recent_teammate_delta_10",
+    "driver_weighted_teammate_delta",
+    "driver_circuit_prior_starts",
+    "driver_circuit_classified_finishes",
+    "driver_circuit_teammate_score",
+    "constructor_prior_races",
+    "constructor_recent_finish_score_5",
+    "constructor_recent_finish_score_10",
+    "constructor_weighted_finish_score",
+    "constructor_recent_dnf_rate_10",
+    "constructor_weighted_dnf_rate",
+    "constructor_circuit_prior_races",
+    "constructor_circuit_finish_score"
+  ],
+  "training_columns": [
+    "training_season_weight",
+    "target_normalized_position",
+    "target_official_position",
+    "target_classification_status"
+  ],
+  "dnf_handling": "DNFs are excluded from driver pace and teammate features. They are retained only in constructor reliability history and training targets.",
+  "fallbacks": {
+    "driver_performance": "Prior field mean, or 0.5 when no earlier race exists.",
+    "driver_teammate_delta": "Neutral value of 0.0.",
+    "constructor_performance": "Prior field mean, or 0.5 when no earlier race exists.",
+    "constructor_dnf_rate": "Prior field DNF rate, or 0.0 when no earlier race exists."
+  }
+}
